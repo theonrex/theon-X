@@ -24,6 +24,8 @@
     "canvas-confetti": "",
     "chart.js": "",
     "cors": "^2.8.5",
+    "eslint": "^8.31.0",
+    "eslint-config-next": "^13.1.1",
     "ethers": "^5.7.1",
     "graphql": "^16.6.0",
     "graphql-request": "^5.1.0",
@@ -52,8 +54,6 @@
     "wagmi": "^0.6.8"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.18.6",
-    "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5"
+    "@babel/preset-react": "^7.18.6"
   }
 }
