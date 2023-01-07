@@ -13,7 +13,7 @@ const news = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "http://localhost:8000/news",
+      url: "https://theonx-backend.vercel.app/news",
     };
 
     axios
