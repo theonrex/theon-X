@@ -61,10 +61,10 @@ npm run build
 ```
 
 ## Built With
-* [Next.js -](https://choosealicense.com)  A framework for building server-rendered React applications
-* [Express.js -](https://choosealicense.com) A web framework for Node.js
-* [Cryptopanic API -](https://choosealicense.com) A cryptocurrency news API
-* [CoinGecko API -](https://choosealicense.com) A cryptocurrency price API
+* [Next.js -](https://nextjs.org/)  A framework for building server-rendered React applications
+* [Express.js -](https://expressjs.com/) A web framework for Node.js
+* [Cryptopanic API -](https://cryptopanic.com/developers/api/) A cryptocurrency news API
+* [CoinGecko API -](https://www.coingecko.com/api/documentations/v3) A cryptocurrency price API
 
 
 
