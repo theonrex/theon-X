@@ -12,8 +12,6 @@ import Trade from "../images/trade.png";
 import Walletimg from "../images/wallet.png";
 import Features from "./Features";
 import CountUp from "./Countup";
-// import image from client
-import { urlFor } from "../lib/client";
 
 function Home() {
   const [totalCrypto, settotalCrypto] = useState([]);

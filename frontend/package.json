@@ -1,5 +1,5 @@
 {
-  "name": "tenacity",
+  "name": "theon-x",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,13 +16,9 @@
     "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@material-ui/lab": "",
     "@mui/icons-material": "",
-    "@mui/material": "",
+    "@mui/material": "^5.11.3",
     "@portabletext/react": "^2.0.0",
-    "@sanity/block-content-to-react": "^3.0.0",
-    "@sanity/client": "",
-    "@sanity/image-url": "",
     "@tanstack/react-query": "^4.19.0",
-    "@walletconnect/web3-provider": "",
     "axios": "",
     "bootstrap": "",
     "canvas-confetti": "",
@@ -39,11 +35,11 @@
     "next": "^13.0.5",
     "next-auth": "^4.12.3",
     "next-sanity-image": "^3.2.1",
-    "react": "^18.2.0",
+    "react": "",
     "react-bootstrap": "^2.5.0",
     "react-chartjs-2": "^4.3.1",
     "react-countup": "^6.3.1",
-    "react-dom": "18.2.0",
+    "react-dom": "",
     "react-fast-marquee": "^1.3.5",
     "react-icons": "^4.3.1",
     "react-paginate": "^8.1.4",
@@ -53,8 +49,7 @@
     "react-sparklines": "^1.7.0",
     "sass": "^1.54.9",
     "slick-carousel": "^1.8.1",
-    "wagmi": "^0.6.8",
-    "web3modal": "^1.9.9"
+    "wagmi": "^0.6.8"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.18.6",

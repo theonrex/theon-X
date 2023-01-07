@@ -9,7 +9,7 @@ app.use(cors());
 app.get("/news", (req, res) => {
   const options = {
     method: "GET",
-    url: `https://cryptopanic.com/api/v1/posts/?auth_token=${process.env.NEXT_PUBLIC_API_KEY}&filter=important&kind=news`,
+    url: `https://cryptopanic.com/api/v1/posts/?auth_token=${process.env.CRYPTOPANIC_API_KEY}&filter=important&kind=news`,
 
     headers: {
       accept: "application/json",

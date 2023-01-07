@@ -4,9 +4,6 @@ import Button from "react-bootstrap/Button";
 import CryptoData from "./coinWidget/CryptoData";
 import HavenImg from "../public/haven.png";
 
-// import image from client
-import { urlFor } from "../lib/client";
-
 function HeroBanner({ heroBanner }) {
 
   
