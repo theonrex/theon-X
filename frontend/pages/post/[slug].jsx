@@ -3,7 +3,7 @@ import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Link from "next/link";
 const graphcms = new GraphQLClient(
-  `https://api-sa-east-1.hygraph.com/v2/${process.env.HYGRAPH_API_KEY}/master`
+  `https://api-sa-east-1.hygraph.com/v2/${process.env.NEXT_PUBLIC_HYGRAPH_API_KEY}/master`
 );
 
 const query = gql`

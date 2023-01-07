@@ -5,7 +5,7 @@ import BlogPost from "../components/blog/BlogPost";
 import Author from "../components/blog/Author"
 import Link from "next/link";
 const graphcms = new GraphQLClient(
-  `https://api-sa-east-1.hygraph.com/v2/${process.env.HYGRAPH_API_KEY}/master`
+  `https://api-sa-east-1.hygraph.com/v2/${process.env.NEXT_PUBLIC_HYGRAPH_API_KEY}/master`
 );
 
 const query = gql`
