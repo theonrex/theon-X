@@ -17,7 +17,7 @@ export default function LiveNews() {
     axios
       .request(options)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         setLiveNews(response.data);
         setData(true);
       })
@@ -28,7 +28,6 @@ export default function LiveNews() {
 
   const theonxNews = liveNews.results;
 
-  console.log(theonxNews);
 
   //cryptopanic.com/api/v1/posts/?auth_token=08eaed58a4c964032efba9463b82ae360c214b3a
   if (data == false)
