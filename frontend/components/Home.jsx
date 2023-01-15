@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Button from "@mui/material/Button";
 import CryptoData from "./coinWidget/CryptoData";
 import axios from "axios";
 
@@ -49,7 +48,7 @@ function Home() {
             and Litecoin, as well as lesser-known altcoins that you may be
             interested in.
           </p>
-          <Button className="banner_btn purple_btn_normal" variant="contained">
+          <button className="banner_btn purple_btn_normal" variant="contained">
             <Link
               target="_blank"
               passHref
@@ -58,7 +57,7 @@ function Home() {
             >
               View Market
             </Link>
-          </Button>
+          </button>
         </div>
 
         <div className="col6 haven_img_banner">
@@ -77,15 +76,15 @@ function Home() {
             users and open a wallet
           </h1>
           <p className="hero_p">
-            In addition to providing real-time prices for over, theon-x also
-            provides a link to open a wallet with some of our recommended
-            platforms. This includes popular exchanges like Binance, Bybit,
-            Coinbase, as well as secure wallets like Trust Wallet and MetaMask.
-            By choosing theon-x, you can access a wide range of trusted and
-            reliable platforms to securely store and manage your
-            cryptocurrencies.
+            In addition to providing real-time prices for over{" "}
+            {totalListedCoins?.toLocaleString()} cryptocurrency, theon-x also provides a link
+            to open a wallet with some of our recommended platforms. This
+            includes popular exchanges like Binance, Bybit, Coinbase, as well as
+            secure wallets like Trust Wallet and MetaMask. By choosing theon-x,
+            you can access a wide range of trusted and reliable platforms to
+            securely store and manage your cryptocurrencies.
           </p>
-          <Button className="banner_btn purple_btn_normal" variant="contained">
+          <button className="banner_btn purple_btn_normal" variant="contained">
             <Link
               target="_blank"
               passHref
@@ -94,7 +93,7 @@ function Home() {
             >
               Create Wallet{" "}
             </Link>
-          </Button>
+          </button>
         </div>
       </div>
       {/* Third section */}
@@ -124,8 +123,8 @@ function Home() {
           <section className="create_portfolio">
             <div className=" rowx banner_news_col1_5"></div>
             <div className=" rowx banner_news_col1_5">
-              <Button
-                className="banner_btn purple_btn_normal"
+              <button
+                className="purple_btn_normal banner_btn "
                 variant="contained"
               >
                 <Link
@@ -136,7 +135,7 @@ function Home() {
                 >
                   Read News
                 </Link>
-              </Button>
+              </button>
             </div>
           </section>
         </div>

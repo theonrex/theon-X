@@ -14,8 +14,9 @@ export default function GlobalData({
         <div className=" global_details">
           <h4 className="global_total_market_cap">
             Global Market Cap:{" "}
+            <br />
             <span>
-              ${" "}
+              $
               {total_market_cap?.toLocaleString({
                 maximumFractionDigits: 5,
               }) }

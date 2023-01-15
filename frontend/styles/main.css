@@ -51,7 +51,12 @@ input:focus {
   margin-top: 2em;
 }
 
+.purple_btn_normal {
+  padding: 12em;
+}
+
 .banner_btn {
+  padding: 1em;
   margin-right: 1em;
 }
 
@@ -99,10 +104,11 @@ input:focus {
 
 .coin_row {
   width: 100%;
+  margin: auto;
   margin: auto 1em;
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   justify-content: flex-start;
 }
 
@@ -309,7 +315,7 @@ input:focus {
 }
 
 .mag_3 {
-  padding: 1em;
+  padding: 0.5em 1em;
 }
 
 .authorsName {
@@ -390,6 +396,9 @@ input:focus {
 .circulating_supply,
 .price_change_percentage_1h_in_currency {
     display: none;
+  }
+  .Join_over {
+    display: flex !important;
   }
 }
 @media screen and (max-width: 720px) {
@@ -1101,78 +1110,78 @@ input:focus {
     margin: auto;
     margin: auto 1em;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
-  .coin_row .widget_Details {
+  .widget_Details {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     align-content: space-around;
   }
-  .coin_row .coin_row img {
+  .coin_row img {
     display: block;
     margin: auto;
   }
-  .coin_row .price_widget,
-.coin_row .green,
-.coin_row .red {
+  .price_widget,
+.green,
+.red {
     text-align: center;
   }
-  .coin_row .coin_name_widget {
+  .coin_name_widget {
     font-size: 1em;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
     margin: 0.3em 0;
     display: block;
     padding-left: 0;
     border: none !important;
   }
-  .coin_row .banner_text h1 br {
+  .banner_text h1 br {
     display: block;
   }
-  .coin_row .banner_text h1 {
+  .banner_text h1 {
     text-align: center;
     display: block;
     margin: auto;
     font-size: 3em;
     width: 100%;
   }
-  .coin_row .banner_text p {
+  .banner_text p {
     text-align: center;
     display: block;
     width: 100%;
     padding-top: 1em;
     margin: auto !important;
   }
-  .coin_row .banner_btn,
-.coin_row .purple_btn_normal_outlined {
+  .banner_btn,
+.purple_btn_normal_outlined {
     margin: 1em auto !important;
     text-align: center !important;
     display: block !important;
   }
-  .coin_row .purple_btn_normal_outlined {
+  .purple_btn_normal_outlined {
     margin-top: 1em !important;
   }
-  .coin_row .haven_img_banner img {
+  .haven_img_banner img {
     width: 90%;
     margin: auto;
     display: block;
   }
-  .coin_row .Join_over {
+  .Join_over {
     display: flex;
     flex-direction: column;
   }
-  .coin_row .Join_over_img {
+  .Join_over_img {
     order: 2;
   }
-  .coin_row .top_Cryptocurrency {
+  .top_Cryptocurrency {
     padding-top: 2em;
   }
 }
-@media screen and (max-width: 1032px) and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .haven_img_banner img {
     width: 90%;
   }
@@ -1208,7 +1217,7 @@ input:focus {
     margin-right: auto;
   }
   .features_text h1 {
-    padding-top: 2em;
+    padding-top: 0.3em;
   }
   .features_middle {
     order: 1;
@@ -1232,7 +1241,6 @@ input:focus {
   .banner_news_col1_5 {
     display: flex !important;
     flex-direction: row-reverse;
-    padding-bottom: 2em;
   }
   .create_portfolio img {
     width: 90px;
@@ -1267,9 +1275,6 @@ input:focus {
     text-align: center;
     padding-bottom: 2em;
   }
-  .create_portfolio {
-    padding-top: 2em;
-  }
   .haven_img_banner_Nft img {
     width: 90%;
     display: block;
@@ -1288,7 +1293,7 @@ input:focus {
     padding-top: 1em;
   }
 }
-@media screen and (max-width: 1032px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .news_home .latest_news {
     font-size: 1.4em;
   }
@@ -1296,13 +1301,9 @@ input:focus {
     font-size: 24px;
   }
 }
-@media screen and (max-width: 1032px) and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .post_head header {
     font-size: 0.8em;
-  }
-  .coin_row {
-    width: 90%;
-    margin: auto;
   }
   .overlay_marquee {
     --gradient-width: 20px;
@@ -1314,34 +1315,28 @@ input:focus {
     padding-top: 2em;
   }
 }
-@media screen and (max-width: 1032px) {
-  .deneb_cta .cta_wrapper .cta_content h3:after {
-    content: "";
-    display: block;
-    /* background: url(../images/shape/line_2.png) no-repeat; */
-    max-width: 110px;
-    height: 2px;
-    margin-top: 13px;
-    margin-bottom: 24px;
-  }
+.deneb_cta .cta_wrapper .cta_content h3:after {
+  content: "";
+  display: block;
+  /* background: url(../images/shape/line_2.png) no-repeat; */
+  max-width: 110px;
+  height: 2px;
+  margin-top: 13px;
+  margin-bottom: 24px;
 }
-@media screen and (max-width: 1032px) {
-  .deneb_cta .cta_wrapper .cta_content p {
-    color: #fff;
-  }
+
+.deneb_cta .cta_wrapper .cta_content p {
+  color: #fff;
 }
-@media screen and (max-width: 1032px) {
-  .deneb_cta .cta_wrapper .button_box {
-    float: right;
-  }
+
+.deneb_cta .cta_wrapper .button_box {
+  float: right;
 }
-@media screen and (max-width: 1032px) and (max-width: 579px) {
+
+@media screen and (max-width: 579px) {
   .red,
 .green {
     font-size: 1em;
-  }
-  .price_widget {
-    font-size: 0.7em;
   }
   .widget_Details .red,
 .widget_Details .green {
@@ -1404,7 +1399,7 @@ input:focus {
     padding-top: 0;
   }
 }
-@media screen and (max-width: 1032px) and (max-width: 404px) {
+@media screen and (max-width: 404px) {
   .count_up {
     margin: 2em 0;
     padding: 2em 0.2em;
@@ -1414,7 +1409,10 @@ input:focus {
     text-align: center;
   }
 }
-@media screen and (max-width: 1032px) and (max-width: 384px) {
+@media screen and (max-width: 384px) {
+  .widget_Details {
+    padding: 0 0.2em;
+  }
   .Blog_post h2 {
     font-size: 1.5em;
   }
@@ -1425,16 +1423,6 @@ input:focus {
 .green,
 .red {
     text-align: center;
-  }
-  .price_widget {
-    font-size: 0.5em;
-  }
-  .coin_name_widget {
-    font-size: 0.6em !important;
-  }
-  .widget_Details .red,
-.widget_Details .green {
-    font-size: 0.4em;
   }
   .create_portfolio img {
     width: 50px;
@@ -1482,12 +1470,12 @@ input:focus {
     border: none !important;
   }
 }
-@media screen and (max-width: 1032px) and (max-width: 254px) {
+@media screen and (max-width: 254px) {
   .post_head header {
     font-size: 0.6em;
   }
 }
-@media screen and (max-width: 1032px) and (max-width: 224px) {
+@media screen and (max-width: 224px) {
   .post_head header {
     font-size: 0.8em;
   }

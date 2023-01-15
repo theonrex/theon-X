@@ -50,7 +50,11 @@ input:focus {
 .haven_img_banner_Nft {
   margin-top: 2em;
 }
+.purple_btn_normal{
+  padding: 12em ;
+}
 .banner_btn {
+  padding: 1em;
   margin-right: 1em;
 }
 //global data
@@ -92,14 +96,14 @@ input:focus {
 .widget_container {
   display: flex;
 }
-.coin_row {
-  width: 100%;
-  margin: auto 1em;
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: flex-start;
-}
+  .coin_row {
+      width: 100%;
+    margin: auto;
+    margin: auto 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;}
 .coin_row img {
   width: 60px;
   padding: 0 1em;
@@ -289,7 +293,7 @@ font-weight: 700;
 text-transform: uppercase;
 }
 .mag_3{
-  padding: 1em;
+  padding: 0.5em 1em;
 }
 .authorsName{
   color: #c00569;
@@ -363,6 +367,10 @@ display: flex;
   .circulating_supply,
   .price_change_percentage_1h_in_currency {
     display: none;
+  }
+
+  .Join_over{
+    display: flex !important;
   }
 }
 
@@ -1080,20 +1088,20 @@ display: flex;
 
 @media screen and (max-width: 1032px) {
   .coin_row {
-    width: 100%;
+width: 100%;
     margin: auto;
     margin: auto 1em;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;}
 
     .widget_Details {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      align-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: space-around;
     }
     .coin_row img {
       display: block;
@@ -1106,7 +1114,7 @@ display: flex;
     }
     .coin_name_widget {
       font-size: 1em;
-      text-align: center;
+      text-align: left;
       font-weight: bold;
       margin: 0.3em 0;
       display: block;
@@ -1156,6 +1164,9 @@ display: flex;
     .top_Cryptocurrency {
       padding-top: 2em;
     }
+  
+  
+  
   }
   @media screen and (max-width: 1000px) {
     .haven_img_banner img {
@@ -1197,7 +1208,7 @@ display: flex;
       margin-right: auto;
     }
     .features_text h1 {
-      padding-top: 2em;
+      padding-top: 0.3em;
     }
     .features_middle {
       order: 1;
@@ -1223,7 +1234,7 @@ display: flex;
     .banner_news_col1_5 {
       display: flex !important;
       flex-direction: row-reverse;
-      padding-bottom: 2em;
+      // padding-bottom: 2em;
     }
 
     .create_portfolio img {
@@ -1259,9 +1270,9 @@ display: flex;
       text-align: center;
       padding-bottom: 2em;
     }
-    .create_portfolio {
-      padding-top: 2em;
-    }
+    // .create_portfolio {
+    //   padding-top: 2em;
+    // }
     .haven_img_banner_Nft img {
       width: 90%;
       display: block;
@@ -1293,10 +1304,7 @@ display: flex;
     .post_head header {
       font-size: 0.8em;
     }
-    .coin_row {
-      width: 90%;
-      margin: auto;
-    }
+  
     .overlay_marquee {
       --gradient-width: 20px;
     }
@@ -1333,9 +1341,7 @@ display: flex;
     .green {
       font-size: 1em;
     }
-    .price_widget {
-      font-size: 0.7em;
-    }
+  
 
     .widget_Details .red,
     .widget_Details .green {
@@ -1414,6 +1420,10 @@ display: flex;
   }
 
   @media screen and (max-width: 384px) {
+
+    .widget_Details {
+    padding: 0 0.2em;
+}
     .Blog_post h2{
       font-size: 1.5em;
     }
@@ -1425,17 +1435,10 @@ display: flex;
     .red {
       text-align: center;
     }
-       .price_widget {
-      font-size: 0.5em;
-    }
-    .coin_name_widget{
-      font-size: 0.6em !important;
-    }
+    
+  
 
-    .widget_Details .red,
-    .widget_Details .green {
-      font-size: 0.4em;
-    }
+  
 
     .create_portfolio img {
       width: 50px;
@@ -1500,4 +1503,3 @@ display: flex;
     font-size: 1em;
 }
   }
-}

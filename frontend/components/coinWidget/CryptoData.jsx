@@ -55,7 +55,7 @@ const CryptoData = () => {
 					Top Cryptocurrency{" "}
 				</h2>
 
-				<Marquee speed={15} pauseOnHover={true} gradientWidth={30}>
+				<Marquee speed={15} pauseOnHover={true} gradientWidth={10}>
 					<div className="widget_scroll">
 						{markets.map((market, i) => {
 							return (

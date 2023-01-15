@@ -201,12 +201,8 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
                           <div className="">
                             {market.price_change_percentage_24h < 0 ? (
                               <p className="red">
-                                {market.price_change_percentage_24h ==
-                                market.price_change_percentage_24h?.toFixed(1)
-                                  ? market.price_change_percentage_24h?.toFixed(
-                                      1
-                                    )
-                                  : market.price_change_percentage_24h}
+                                {market.price_change_percentage_24h &&
+                                  market.price_change_percentage_24h.toFixed(1)}
                                 % <i className="bi bi-caret-down-fill"></i>{" "}
                               </p>
                             ) : (

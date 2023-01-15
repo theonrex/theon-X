@@ -18,11 +18,10 @@ const Countup = () => {
 	
 	console.log(totalCrypto);
   const totalListedCoins = totalCrypto?.data?.active_cryptocurrencies;
-  const rex = 55;
 
   useCountUp({
     ref: "firstCounter",
-    end: totalListedCoins,
+    end: 12000,
     enableScrollSpy: true,
     scrollSpyDelay: 50,
   });
