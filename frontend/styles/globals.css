@@ -23,7 +23,7 @@ border-top-color: #00000021;
     border-style: solid;
 border-top-width: 1px !important;
     border-right-width: 0px !important;
-    border-bottom-width: 1px !important;
+    /* border-bottom-width: 1px !important; */
     border-left-width: 0px !important;
   border-color: rgba(0, 0, 0, 0.323) !important;
   }
@@ -264,6 +264,9 @@ article {
 body {
   font-family: "Titillium Web", "Cabin", sans-serif !important;
 }
+.nav_t{
+  display: none;
+}
 .rowx{
   display: table;
   width: 100%;
@@ -282,6 +285,13 @@ svg, circle{
   fill: none !important;
   fill-opacity: inherit !important;
 
+}
+
+.nav_t svg, circle {
+    width: 50px;
+    background: transparent;
+    fill: none !important;
+    fill-opacity: inherit !important;
 }
 .bi-chevron{
   color: black;
@@ -471,6 +481,7 @@ display: flex;
 }
 
 @media screen and (min-width: 1204px) {
+ 
   
   .navbar .dark_mobile_show {
     display: block;
@@ -480,8 +491,13 @@ display: flex;
     display: none !important;
   }
 }
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+     .market_data img  {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 0.9em;
+  }
 .col30,
 .col6,
 .col50,
@@ -503,6 +519,82 @@ display: flex;
   }
 
   .container-fluid>.nav_t {
+    display: flex;
+    position: absolute;
+    right: 3em !important;
+    align-items: center;
+    justify-content: flex-end !important;
+  }
+
+  .navbar>.container-fluid,
+  .navbar>.container-lg,
+  .navbar>.container-md,
+  .navbar>.container-sm,
+  .navbar>.container-xl,
+  .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: unset !important;
+  }
+
+  .navbar .switch-checkbox {
+    padding-bottom: 5px;
+  }
+
+  .navbar .dark_mobile_show {
+    display: block;
+    position: absolute;
+    right: 0 !important;
+    align-items: center;
+    justify-content: flex-end !important;
+  }
+
+  .navbar .nav-link {
+    font-size: 1.5em;
+    display: block;
+    padding: 1rem 1em !important;
+    color: #7800A3;
+    margin: auto 1px;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }
+
+
+}
+@media screen and (max-width: 1200px) {
+    .features_mg .col30 {
+    display: block;
+    width: 100%;
+    }
+     .market_data img  {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 0.9em;
+  }
+.col30,
+.col6,
+.col50,
+.col60,
+.col70,
+.col25 {
+    width: 100%;
+    padding: 2px;
+  }
+  .navbar-nav .dark_hide_mobile {
+    display: none !important;
+  }
+
+  .container-fluid>.navbar-brand {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: flex-start !important;
+  }
+
+  .container-fluid>.nav_t {
+    display: flex;
     position: absolute;
     right: 3em !important;
     align-items: center;
@@ -626,6 +718,13 @@ img{
     padding: 1em 1.3em;
 }
 }
+
+/* @media screen and (max-width: 580px) {
+  .features_mg .col30 {
+display: block;
+}
+  
+} */
 
 @media screen and (max-width:346px) {
   .market_cap ,

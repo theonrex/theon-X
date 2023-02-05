@@ -5,63 +5,63 @@ import { useParams } from "react-router-dom";
 import CoinData from "../../components/coinWidget/CryptoData";
 //price charts
 import {
-	Chart as ChartJS,
-	CategoryScale,
-	LinearScale,
-	PointElement,
-	LineElement,
-	Title,
-	Tooltip,
-	Filler,
-	Legend,
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Filler,
+  Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import moment from "moment";
 // import Skeleton from "./Skeleton";
 //price charts
 ChartJS.register(
-	CategoryScale,
-	LinearScale,
-	PointElement,
-	LineElement,
-	Title,
-	Tooltip,
-	Filler,
-	Legend
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Filler,
+  Legend
 );
 
 const CoinId = ({ coinIDX, coin }) => {
-	// console.log(coinIDX);
-	// console.log(coin)
+  // console.log(coinIDX);
+  // console.log(coin)
 
-	const { id } = useParams();
-	const { response } = coinIDX;
+  const { id } = useParams();
+  const { response } = coinIDX;
 
-	//price charts
-	const coinChartData = coinIDX.prices.map((value) => ({
-		x: value[0],
-		y: value[1].toFixed(2),
-	}));
-	//price charts
+  //price charts
+  const coinChartData = coinIDX.prices.map((value) => ({
+    x: value[0],
+    y: value[1].toFixed(2),
+  }));
+  //price charts
 
-	const options = {
-		responsive: true,
-	};
-	//price charts
+  const options = {
+    responsive: true,
+  };
+  //price charts
 
-	const data = {
-		labels: coinChartData.map((value) => moment(value.x).format("MMM DD")),
-		datasets: [
-			{
-				fill: true,
-				label: id,
-				data: coinChartData.map((val) => val.y),
-				borderColor: "rgb(53, 162, 235)",
-				backgroundColor: "rgba(53, 162, 235, 0.5)",
-			},
-		],
-	};
-	return (
+  const data = {
+    labels: coinChartData.map((value) => moment(value.x).format("MMM DD")),
+    datasets: [
+      {
+        fill: true,
+        label: id,
+        data: coinChartData.map((val) => val.y),
+        borderColor: "rgb(53, 162, 235)",
+        backgroundColor: "rgba(53, 162, 235, 0.5)",
+      },
+    ],
+  };
+  return (
     <div className="container">
       <div className="coinPageId rowx">
         <header className="coinId_Header">
@@ -69,7 +69,7 @@ const CoinId = ({ coinIDX, coin }) => {
             <span className="idCoinName"> Coins</span>
           </Link>
           <i className="bi bi-chevron-right"></i>{" "}
-          <p className="id_Coin_price">{coin.name} price</p>
+          <p className="id_Coin_price">{coin.symbol} price</p>
         </header>
 
         <div className="col70">
@@ -83,7 +83,6 @@ const CoinId = ({ coinIDX, coin }) => {
           <div className="coinId_Price">
             <img src={coin.image.small} alt="coin" />
             <h1 className="">{coin.name}</h1>
-            <p> ( {coin.symbol}) </p>
           </div>
           <div className="coin_Id_price">
             <h1 className="">
@@ -535,7 +534,7 @@ const CoinId = ({ coinIDX, coin }) => {
       </div>
       {/* Markets */}
       <div></div>
-      <CoinData />
+      {/* <CoinData /> */}
     </div>
   );
 };
@@ -543,20 +542,20 @@ const CoinId = ({ coinIDX, coin }) => {
 export default CoinId;
 
 export async function getServerSideProps(context) {
-	const { id } = context.query;
-	const resquest =
-		await fetch(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=1d
+  const { id } = context.query;
+  const resquest =
+    await fetch(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=1d
     `);
 
-	const CoinIdData = await resquest.json();
+  const CoinIdData = await resquest.json();
 
-	const res = await fetch(`https://api.coingecko.com/api/v3/coins/${id}
+  const res = await fetch(`https://api.coingecko.com/api/v3/coins/${id}
     `);
-	const data = await res.json();
-	return {
-		props: {
-			coinIDX: CoinIdData,
-			coin: data,
-		},
-	};
+  const data = await res.json();
+  return {
+    props: {
+      coinIDX: CoinIdData,
+      coin: data,
+    },
+  };
 }

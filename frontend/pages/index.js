@@ -34,21 +34,6 @@ const index = () => {
     </div>
   );
 };
-//get data from sanity {client} imported at the top
 
-// export const getServerSideProps = async () => {
-//   //grab all items in product from sanity
-//   const query = '*[_type == "blogPost"]';
-//   //join the generated data form {client} with products
-//   const posts = await client.fetch(query);
-
-// //return the generated data for use
-// 	const authorQuery = '*[_type == "author"]';
-// 	//join the generated data form {client} with products
-// 	const authors = await client.fetch(authorQuery);
-//   return {
-//     props: {posts, authors}
-//   }
-// }
 
 export default index;

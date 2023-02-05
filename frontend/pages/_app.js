@@ -4,6 +4,7 @@ import "@etchteam/next-pagination/dist/index.css";
 import { Layout } from "../components";
 import "../styles/main.css";
 import "../styles/globals.css";
+import "../styles/darkMode.css"
 
 //auth
 import {
@@ -37,7 +38,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <Layout>
+    <Layout >
       <Component {...pageProps} />
     </Layout>
   );

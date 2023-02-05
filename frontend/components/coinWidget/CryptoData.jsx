@@ -47,36 +47,35 @@ const CryptoData = () => {
 	console.log(filteredMarkets);
 
 	return (
-		<div className="container-xxl col100">
-			<div className="">
-			
-				<h2 className="top_Cryptocurrency container-xxl purple_text">
-					{" "}
-					Top Cryptocurrency{" "}
-				</h2>
+    <div className="container-xxl col100">
+      <div className="">
+        <h2 className="top_Cryptocurrency container-xxl purple_text">
+          {" "}
+          Top Cryptocurrency{" "}
+        </h2>
 
-				<Marquee speed={15} pauseOnHover={true} gradientWidth={10}>
-					<div className="widget_scroll">
-						{markets.map((market, i) => {
-							return (
-								<Cryptowidget
-									key={i}
-									keys={market.url}
-									name={market.name}
-									price={market.current_price}
-									image={market.image}
-									price_change_percentage_24h={
-										market.price_change_percentage_24h
-									}
-									market_cap_rank={market.market_cap_rank}
-								/>
-							);
-						})}
-					</div>
-				</Marquee>
-			</div>
-		</div>
-	);
+        <Marquee speed={15} pauseOnHover={true} gradient={false}>
+          <div className="widget_scroll">
+            {markets.map((market, i) => {
+              return (
+                <Cryptowidget
+                  key={i}
+                  keys={market.url}
+                  name={market.name}
+                  price={market.current_price}
+                  image={market.image}
+                  price_change_percentage_24h={
+                    market.price_change_percentage_24h
+                  }
+                  market_cap_rank={market.market_cap_rank}
+                />
+              );
+            })}
+          </div>
+        </Marquee>
+      </div>
+    </div>
+  );
 };
 
 export default CryptoData;

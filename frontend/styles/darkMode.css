@@ -1,0 +1,103 @@
+.light{
+    background-color: white ;
+}
+.dark{
+        background-color: rgb(21, 21, 21) ;
+}
+
+.dark .deneb_footer .widget_wrapper{
+    background-color: rgb(21, 21, 21);
+}
+.dark h1,
+.dark tr,
+.dark th,
+.dark li,
+.dark h2,
+.dark h4,
+.dark p,
+.dark a,
+.dark header,
+.dark .css-165lrpn-MuiButtonBase-root-MuiPaginationItem-root,
+.dark .blog_current_title
+{
+    color: white ;
+}
+.dark .banner_text .hero_p
+{
+    color: white;
+    background: transparent;
+    -webkit-text-fill-color: unset;
+}
+
+.dark .purple_btn_normal_outlined a{
+    color: white !important;
+    font-weight: 400;
+}
+
+.dark .count_up h1 span{
+    color: white;
+}
+
+.dark span,
+.dark .authors_job_description {
+    color: rgb(98, 98, 98) ;
+}
+.dark .stack_pagenation svg {
+    fill: #c00569 !important;
+}
+.dark .navbar-toggler-icon{
+     filter: invert(100%); 
+
+}
+.dark .navbar-light .navbar-toggler {
+    border: none;
+    border-color: transparent !important;
+    outline: none !important;
+}
+.navbar-toggler :focus, .navbar-toggler ::after {
+    border: none;
+    outline: none;
+}
+
+
+.css-165lrpn-MuiButtonBase-root-MuiPaginationItem-root {
+    border: 1px solid rgba(255, 255, 255, 0.23);}
+
+/* .dark tbody, */
+/* .dark tfoot, */
+ .dark tr
+ /* .dark td,  */
+ /* .dark th */
+ 
+ {
+    border: 1px solid rgba(255, 255, 255, 0.087) !important;
+border-top-color: #00000021;
+    border-right-color: transparent;
+    border-bottom-color: #00000021;
+    border-left-color: transparent;
+    border-style: solid;
+    border-top-width: 1px !important;
+    border-right-width: 0px !important;
+    border-left-width: 0px !important;
+}
+
+.dark .nav-link {
+color: white !important;
+}
+
+.dark .active{
+color: #c00569 !important;
+}
+
+
+.dark .green{
+    color: green;
+}
+.dark .red{
+    color: red;
+}
+
+.dark .post_body {
+    padding: 0 !important;
+    box-shadow: 0px 0px 28px 6px #bfbfbf1a;
+}
