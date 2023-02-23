@@ -5,6 +5,8 @@ import { Layout } from "../components";
 import "../styles/main.css";
 import "../styles/globals.css";
 import "../styles/darkMode.css"
+import { SSRProvider } from "../ssr-provider";
+import { useForm } from "react-hook-form";
 
 //auth
 import {

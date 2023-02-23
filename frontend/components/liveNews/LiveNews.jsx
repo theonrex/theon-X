@@ -29,7 +29,6 @@ export default function LiveNews() {
   const theonxNews = liveNews.results;
 
 
-  //cryptopanic.com/api/v1/posts/?auth_token=08eaed58a4c964032efba9463b82ae360c214b3a
   if (data == false)
     return (
       <div className="loader-3">

@@ -2,8 +2,11 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
+    <div>
+      <section className="col50"></section>
+      <section className="col50"></section>
+    </div>
+  );
 }
 
 export default Contact

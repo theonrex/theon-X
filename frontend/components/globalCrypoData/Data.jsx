@@ -7,14 +7,7 @@ export default function Data() {
 
   useEffect(() => {
     axios
-      .get(
-        `
-https://api.coingecko.com/api/v3/global
-
-
-`
-      )
-
+      .get(`https://api.coingecko.com/api/v3/global`)
       .then((res) => {
         setMarkets(res.data);
       })

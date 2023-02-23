@@ -88,7 +88,7 @@ function NavBar() {
                       >
                         Coins{" "}
                       </Nav.Link>
-                      {/* <Nav.Link
+                      <Nav.Link
 												href="/contact"
 												className={`${
 													"underline" +
@@ -96,7 +96,7 @@ function NavBar() {
 												} `}
 											>
 												Contact{" "}
-											</Nav.Link> */}
+											</Nav.Link>
                     </Nav>
                     <Nav className="justify-content-end ">
                       <Nav.Link

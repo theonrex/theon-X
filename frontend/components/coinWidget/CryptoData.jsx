@@ -12,19 +12,19 @@ const CryptoData = () => {
 
 	useEffect(() => {
 		const options = {
-			method: "GET",
-			url: "https://coingecko.p.rapidapi.com/coins/markets",
-			params: {
-				vs_currency: "usd",
-				page: "1",
-				per_page: "10",
-				order: "market_cap_desc",
-			},
-			headers: {
-				"X-RapidAPI-Key": "8f8034dd04mshe3e0fd79dfeeb65p139b0djsn42147647b635",
-				"X-RapidAPI-Host": "coingecko.p.rapidapi.com",
-			},
-		};
+      method: "GET",
+      url: "https://coingecko.p.rapidapi.com/coins/markets",
+      params: {
+        vs_currency: "usd",
+        page: "1",
+        per_page: "10",
+        order: "market_cap_desc",
+      },
+      headers: {
+        "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_API,
+        "X-RapidAPI-Host": "coingecko.p.rapidapi.com",
+      },
+    };
 
 		axios
 			.request(options)
