@@ -101,7 +101,7 @@ function Footer() {
                 <div className="row">
                   <div className="col-lg-12 copyright_text_bg ">
                     <div className="copyright_text">
-                      <p>©2021 Theon. All rights reserved</p>
+                      <p>©2023 Theon. All rights reserved</p>
                     </div>{" "}
                     {/* <div className="copyright_text_icons ">
 											<i className="bi bi-facebook"></i>
