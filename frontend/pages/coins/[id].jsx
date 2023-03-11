@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
 import { useParams } from "react-router-dom";
@@ -18,7 +18,6 @@ import {
 import Overview from "../../components/IDPage/Overview";
 import Topsection from "../../components/IDPage/Topsection";
 
-import moment from "moment";
 //price charts
 ChartJS.register(
   CategoryScale,
@@ -39,7 +38,8 @@ const CoinData = dynamic(
 
 const CoinId = ({ coinPriceChart, coin }) => {
   const { id } = useParams();
-  console.log("coin", coin?.id);
+
+
 
   return (
     <div className="">

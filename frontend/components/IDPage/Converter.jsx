@@ -16,7 +16,6 @@ function Converter({
   const [result, setResult] = useState(null);
   const [rateResult, setRateResult] = useState(null);
 
-  console.log(coin);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

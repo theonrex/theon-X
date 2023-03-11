@@ -6,7 +6,6 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { useRouter } from "next/router";
 import { Sparklines, SparklinesLine } from "react-sparklines";
-// import Pagenations from "../pagenation/pagenation"
 import Data from "../globalCrypoData/Data";
 
 import CoinDisplay from "../coinSearch/CoinDisplay";

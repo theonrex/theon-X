@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "@etchteam/next-pagination/dist/index.css";
 import { Layout } from "../components";
 import "../styles/main.css";
 import "../styles/globals.css";
@@ -14,7 +13,6 @@ import {
   WagmiConfig,
 } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
-import { SessionProvider } from "next-auth/react";
 import { SSRProvider } from "@react-aria/ssr";
 
 const { provider, webSocketProvider } = configureChains(defaultChains, [

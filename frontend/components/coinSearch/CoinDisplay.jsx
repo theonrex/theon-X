@@ -60,7 +60,7 @@ const CoinDisplay = () => {
               className="me-2 mb-2"
               onClick={() => handleShow(v)}
             >
-              <i class="bi bi-search"></i>
+              <i className="bi bi-search"></i>
               {typeof v === "string" && `below ${v.split("-")[0]}`}
             </Button>
           ))}
