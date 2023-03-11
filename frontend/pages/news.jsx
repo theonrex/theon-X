@@ -7,7 +7,7 @@ const news = () => {
 
   
   return (
-    <div className="news_home">
+    <div className="container-xxl news_home">
       <header className="latest_news">Latest Crypto News</header>
       <LiveNews />
     </div>

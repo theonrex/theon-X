@@ -88,23 +88,11 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
     }
   }, [router.query.page]);
 
-  // // search markets
-  // const handleChange = (e) => {
-  // 	setSearch(e.target.value);
-  // };
-  // const filteredMarkets = markets.filter((coin) =>
-  // 	markets.name?.toLowerCase().includes(search.toLowerCase())
-  // );
-
-  // console.log(filteredMarkets);
-
-  //get number of listed coin perpage
-
   const perPage = 30;
   const totalListedCoins = totalCrypto?.data?.active_cryptocurrencies;
 
   const result = totalListedCoins / perPage;
-  console.log(result);
+  console.log(markets);
 
   return (
     <div className="coinData_container">
@@ -132,9 +120,9 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
                     <th className="Last_7_Days">Last 7 Days</th>
                   </tr>
 
-                  {markets.map((market) => {
+                  {markets.map((market, i) => {
                     return (
-                      <tr target="_blank" className="market_Hover">
+                      <tr target="_blank" className="market_Hover" key={i}>
                         <td className="market_cap_rank">
                           <>{market.market_cap_rank}</>
                         </td>
@@ -175,104 +163,174 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
                             </h4>
                           </Link>
                         </td>
+
                         <td className="price_change_percentage_1h_in_currency">
-                          <div className="">
-                            {market.price_change_percentage_1h_in_currency <
-                            0 ? (
-                              <p className="red">
-                                {market.price_change_percentage_1h_in_currency &&
-                                  market.price_change_percentage_1h_in_currency.toFixed(
-                                    2
-                                  )}
-                                % <i className="bi bi-caret-down-fill"></i>{" "}
-                              </p>
-                            ) : (
-                              <p className="green">
-                                {market.price_change_percentage_1h_in_currency &&
-                                  market.price_change_percentage_1h_in_currency.toFixed(
-                                    2
-                                  )}
-                                % <i className="bi bi-caret-up-fill"></i>{" "}
-                              </p>
-                            )}
-                          </div>
+                          <Link
+                            target="_blank"
+                            passHref
+                            rel="noopener noreferrer"
+                            href={`/coins/${market.id}`}
+                            key={market.id}
+                          >
+                            <div className="">
+                              {market.price_change_percentage_1h_in_currency <
+                              0 ? (
+                                <p className="red">
+                                  {market.price_change_percentage_1h_in_currency &&
+                                    market.price_change_percentage_1h_in_currency.toFixed(
+                                      2
+                                    )}
+                                  % <i className="bi bi-caret-down-fill"></i>{" "}
+                                </p>
+                              ) : (
+                                <p className="green">
+                                  {market.price_change_percentage_1h_in_currency &&
+                                    market.price_change_percentage_1h_in_currency.toFixed(
+                                      2
+                                    )}
+                                  % <i className="bi bi-caret-up-fill"></i>{" "}
+                                </p>
+                              )}
+                            </div>
+                          </Link>
                         </td>
+
                         <td className="price_change_percentage_24h">
-                          <div className="">
-                            {market.price_change_percentage_24h < 0 ? (
-                              <p className="red">
-                                {market.price_change_percentage_24h &&
-                                  market.price_change_percentage_24h.toFixed(1)}
-                                % <i className="bi bi-caret-down-fill"></i>{" "}
-                              </p>
-                            ) : (
-                              <p className="green">
-                                {market.price_change_percentage_24h &&
-                                  market.price_change_percentage_24h.toFixed(1)}
-                                % <i className="bi bi-caret-up-fill"></i>{" "}
-                              </p>
-                            )}
-                          </div>
+                          <Link
+                            target="_blank"
+                            passHref
+                            rel="noopener noreferrer"
+                            href={`/coins/${market.id}`}
+                            key={market.id}
+                          >
+                            <div className="">
+                              {market.price_change_percentage_24h < 0 ? (
+                                <p className="red">
+                                  {market.price_change_percentage_24h &&
+                                    market.price_change_percentage_24h.toFixed(
+                                      1
+                                    )}
+                                  % <i className="bi bi-caret-down-fill"></i>{" "}
+                                </p>
+                              ) : (
+                                <p className="green">
+                                  {market.price_change_percentage_24h &&
+                                    market.price_change_percentage_24h.toFixed(
+                                      1
+                                    )}
+                                  % <i className="bi bi-caret-up-fill"></i>{" "}
+                                </p>
+                              )}
+                            </div>
+                          </Link>
                         </td>
+
                         <td className="price_change_percentage_7d_in_currency last_7h">
-                          <div className="">
-                            {market.price_change_percentage_7d_in_currency <
-                            0 ? (
-                              <p className="red">
-                                {market.price_change_percentage_7d_in_currency &&
-                                  market.price_change_percentage_7d_in_currency.toFixed(
-                                    3
-                                  )}
-                                % <i className="bi bi-caret-down-fill"></i>{" "}
-                              </p>
-                            ) : (
-                              <p className="green">
-                                {market.price_change_percentage_7d_in_currency &&
-                                  market.price_change_percentage_7d_in_currency.toFixed(
-                                    3
-                                  )}
-                                % <i className="bi bi-caret-up-fill"></i>{" "}
-                              </p>
-                            )}
-                          </div>
+                          <Link
+                            target="_blank"
+                            passHref
+                            rel="noopener noreferrer"
+                            href={`/coins/${market.id}`}
+                            key={market.id}
+                          >
+                            <div className="">
+                              {market.price_change_percentage_7d_in_currency <
+                              0 ? (
+                                <p className="red">
+                                  {market.price_change_percentage_7d_in_currency &&
+                                    market.price_change_percentage_7d_in_currency.toFixed(
+                                      3
+                                    )}
+                                  % <i className="bi bi-caret-down-fill"></i>{" "}
+                                </p>
+                              ) : (
+                                <p className="green">
+                                  {market.price_change_percentage_7d_in_currency &&
+                                    market.price_change_percentage_7d_in_currency.toFixed(
+                                      3
+                                    )}
+                                  % <i className="bi bi-caret-up-fill"></i>{" "}
+                                </p>
+                              )}
+                            </div>
+                          </Link>
                         </td>
+
                         <td className="total_volume">
-                          <div className="">
-                            {market.total_volume?.toLocaleString({
+                          <Link
+                            target="_blank"
+                            passHref
+                            rel="noopener noreferrer"
+                            href={`/coins/${market.id}`}
+                            key={market.id}
+                          >
+                            <div className="">
+                              {market.total_volume?.toLocaleString({
+                                maximumFractionDigits: 5,
+                              }) < 10
+                                ? market.total_volume
+                                : market.total_volume?.toLocaleString()}
+                            </div>
+                          </Link>
+                        </td>
+
+                        <td className="market_cap">
+                          <Link
+                            target="_blank"
+                            passHref
+                            rel="noopener noreferrer"
+                            href={`/coins/${market.id}`}
+                            key={market.id}
+                          >
+                            {" "}
+                            {market.market_cap?.toLocaleString({
                               maximumFractionDigits: 5,
                             }) < 10
-                              ? market.total_volume
-                              : market.total_volume?.toLocaleString()}
-                          </div>
+                              ? market.market_cap
+                              : market.market_cap?.toLocaleString()}
+                          </Link>
                         </td>
-                        <td className="market_cap">
-                          {market.market_cap?.toLocaleString({
-                            maximumFractionDigits: 5,
-                          }) < 10
-                            ? market.market_cap
-                            : market.market_cap?.toLocaleString()}
-                        </td>
+
                         <td className="circulating_supply">
-                          {market.circulating_supply?.toLocaleString({
-                            maximumFractionDigits: 5,
-                          }) < 10
-                            ? market.circulating_supply
-                            : market.circulating_supply?.toLocaleString()}
+                          <Link
+                            target="_blank"
+                            passHref
+                            rel="noopener noreferrer"
+                            href={`/coins/${market.id}`}
+                            key={market.id}
+                          >
+                            {" "}
+                            {market.circulating_supply?.toLocaleString({
+                              maximumFractionDigits: 5,
+                            }) < 10
+                              ? market.circulating_supply
+                              : market.circulating_supply?.toLocaleString()}{" "}
+                          </Link>
                         </td>
+
                         <td className="sparkline_in_7d">
-                          {market.price_change_percentage_7d_in_currency < 0 ? (
-                            <p className="">
-                              <Sparklines data={market.sparkline_in_7d.price}>
-                                <SparklinesLine color="red" />
-                              </Sparklines>
-                            </p>
-                          ) : (
-                            <p className="">
-                              <Sparklines data={market.sparkline_in_7d.price}>
-                                <SparklinesLine color="green" />
-                              </Sparklines>
-                            </p>
-                          )}
+                          <Link
+                            target="_blank"
+                            passHref
+                            rel="noopener noreferrer"
+                            href={`/coins/${market.id}`}
+                            key={market.id}
+                          >
+                            {market.price_change_percentage_7d_in_currency <
+                            0 ? (
+                              <p className="">
+                                <Sparklines data={market.sparkline_in_7d.price}>
+                                  <SparklinesLine color="red" />
+                                </Sparklines>
+                              </p>
+                            ) : (
+                              <p className="">
+                                <Sparklines data={market.sparkline_in_7d.price}>
+                                  <SparklinesLine color="green" />
+                                </Sparklines>
+                              </p>
+                            )}
+                          </Link>
                         </td>
                       </tr>
                     );

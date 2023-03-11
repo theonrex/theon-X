@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
+
+
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+
+
 body {
-  font-family: "Titillium Web", "Cabin", sans-serif;
+font-family: 'Golos Text', sans-serif;
   background-color: rgb(255, 255, 255); 
    /* background: linear-gradient(7deg, rgba(242, 198, 240, 0.2196078431) 0%, #ffffff 100%); */
   background-repeat: no-repeat;
@@ -88,7 +93,6 @@ hr{
 color: orange;
     background-color: orange;
     height: 1px;
-    border: solid 1px;
     
 }
 
@@ -119,9 +123,11 @@ h6,
 p,
 span,
 header,
-article {
-  font-family: "Titillium Web", "Cabin", sans-serif !important;
-}
+article,
+button,
+.nav,
+.nav-link  {
+font-family: 'Golos Text', sans-serif !important;}
 /* p{
   margin: auto !important;
 } */
@@ -261,9 +267,7 @@ article {
   border-color: transparent !important;
 }
 
-body {
-  font-family: "Titillium Web", "Cabin", sans-serif !important;
-}
+
 .nav_t{
   display: none;
 }
@@ -310,7 +314,12 @@ svg, circle{
     align-content: space-around;
     justify-content: space-evenly;
     align-items: center;
-    border: none!important;
+  
+}
+.coin_name_widget a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .widget_Details{
   padding: 0 0.6em;
@@ -318,6 +327,8 @@ svg, circle{
 
 canvas{
   width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
 }
 .purple_text{
   color: #c7006b;
@@ -378,7 +389,6 @@ canvas{
   margin: auto 14px;
   color: black !important;
   text-transform: capitalize;
-  font-family: "Titillium Web", "Cabin", sans-serif !important;
 }
 .nav_mg{
   margin-top: 1em;
@@ -643,11 +653,12 @@ img{
 }
 .coin_name_widget_s{
   font-size: 1em;
-  padding-left: 0.6em;
 }
 
 @media screen and (max-width:720px) {
-
+.market_data img {
+    width: 13px;
+}
   .coinId_Price h1{
     font-size: 1.5em;
   }
@@ -655,20 +666,7 @@ img{
     font-size: 1.3em;
   }
 
-  .coin_name_widget {
-    display: block;
-    margin: 1em auto 0;
-    font-size: 1em;
-    font-weight: bold;
-    flex-direction: unset;
-    flex-wrap: unset;
-    align-content: unset;
-    justify-content: unset;
-    align-items: unset;
-    padding-left: 0.5em;
-    border: none !important;
-    text-align: left;
-  }
+ 
 .coin_name_widget_s,
 .price_change_percentage_24h .red  i,
 .price_change_percentage_24h .green i {
@@ -735,6 +733,6 @@ display: block;
     padding: 0.8em 1em;
 }
   .news_text header {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 }

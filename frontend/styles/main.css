@@ -74,7 +74,7 @@ input:focus {
 
 .global_total_market_cap span {
   font-size: 0.8em;
-  color: green;
+  color: hsl(120deg, 100%, 25%);
 }
 
 .CoinDisplay_data {
@@ -88,6 +88,75 @@ input:focus {
 .coin_Search_text {
   font-size: 1em;
   font-weight: 500;
+}
+
+.Converter header {
+  font-size: 1.5em;
+  padding: 1em 0;
+  text-transform: capitalize;
+}
+
+.Converter form {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+}
+
+.coin_id_converter {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+}
+
+.coin_id_currency {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+}
+
+.Converter input {
+  margin: 1em 0;
+  border: none;
+  background-color: rgba(255, 173, 243, 0.24);
+}
+
+.Converter select {
+  background-color: #c00569;
+  border: none;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(3, 2, 2, 0) !important;
+  border-radius: 4px;
+  padding: 6px 10px;
+  width: 30%;
+  margin-right: 1em;
+}
+
+.Converter select:focus,
+.Converter select:active,
+.Converter select:checked,
+.Converter select:hover {
+  background-color: #c00569;
+  border: none;
+  outline: none !important;
+  border-width: 1em;
+  border-style: none;
+  border-color: rgba(0, 0, 0, 0) !important;
+  -o-border-image: initial;
+     border-image: initial;
+  border-radius: 0px;
+}
+
+.Converter option:checked {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+#tradingview_3cf2d-wrapper,
+#tv-chart-container {
+  background-color: rgba(0, 0, 0, 0.1294117647);
+  height: 32em !important;
 }
 
 .widget_scroll {
@@ -122,18 +191,16 @@ input:focus {
 }
 
 .red_id {
-  background-color: red;
-  color: white;
-  padding: 0.3em 0.5em;
-  font-size: 1em;
+  color: red;
+  font-size: 0.8em;
   border-radius: 0.5em;
+  font-weight: 600;
 }
 
 .green_id {
-  background-color: green;
-  color: white;
-  padding: 0.3em 0.5em;
-  font-size: 1em;
+  font-weight: 600;
+  color: green;
+  font-size: 0.8em;
   border-radius: 0.5em;
 }
 
@@ -463,6 +530,18 @@ input:focus {
   width: 30px;
 }
 
+.nav-tabs {
+  padding-bottom: 2em;
+}
+
+.nav-tabs,
+.nav-tabs:hover,
+.nav-tabs .nav-link:hover {
+  border: none !important;
+  color: #c00569;
+  border-color: rgba(0, 0, 0, 0) !important;
+}
+
 .coinId_Header {
   display: flex;
   justify-items: center;
@@ -534,14 +613,13 @@ input:focus {
 .coin_Id_price {
   display: flex;
   justify-items: center;
-  align-items: flex-start;
   flex-direction: row;
   align-content: space-around;
+  align-items: baseline;
 }
 
 .coin_Id_price h1 {
-  padding-right: 0.4em;
-  margin-right: 0.2em;
+  margin-right: 0.3em;
   font-size: 2em;
   font-weight: 500;
   font-size: 1.5em;
@@ -566,10 +644,6 @@ input:focus {
 
 .Information header {
   font-size: 1.5em;
-}
-
-.coin_id_market_details {
-  padding-top: 1em;
 }
 
 .coin_id_market_details p {
@@ -669,7 +743,6 @@ input:focus {
   .red_id_change,
 .green_id_change {
     color: white;
-    padding: 0.2em 0.4em;
     font-size: 0.6em;
     border-radius: 0.5em;
   }
@@ -725,16 +798,14 @@ input:focus {
   }
 }
 .red_id_change {
-  background-color: red;
-  color: white;
+  color: red;
   padding: 0.3em 0.7em;
   font-size: 1em;
   border-radius: 0.5em;
 }
 
 .green_id_change {
-  background-color: green;
-  color: white;
+  color: green;
   padding: 0.3em 0.4em;
   font-size: 1em;
   border-radius: 0.5em;
@@ -789,6 +860,12 @@ input:focus {
   text-align: center;
 }
 
+.overview {
+  background-color: #fdfdfd;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 .Description {
   padding-bottom: 2em;
 }
@@ -800,9 +877,8 @@ input:focus {
 @media (max-width: 1007px) {
   .red_id_change,
 .green_id_change {
-    color: white;
-    padding: 0.2em 0.4em;
-    font-size: 0.7em;
+    padding: 1em 5%;
+    font-size: 0.9em;
     border-radius: 0.5em;
   }
 }
@@ -903,7 +979,6 @@ input:focus {
   box-shadow: 2px 2px 26px -3px rgba(0, 0, 0, 0.24);
 }
 
-/*footer*/
 .deneb_footer .widget_wrapper {
   background-repeat: no-repeat;
   background-size: cover;
@@ -1073,130 +1148,28 @@ input:focus {
   font-weight: bold;
 }
 
-@media (max-width: 1107px) {
-  .CreateWallets .col25 {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    align-items: center;
-    width: 100% !important;
-  }
-  .CreateWallets img {
-    width: 40%;
-    margin: auto;
-  }
-  .purple_btn_normal_outlined {
-    border-color: #c7006b !important;
-    padding: 10px 10px;
-    display: inline-block;
-    font-size: 15px;
-    background-color: transparent !important;
-    font-weight: 600;
-    border-radius: 7px;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: black !important;
-  }
-  .count_up .countUp_span {
-    font-size: 0.6em;
-    font-weight: 700;
-  }
-  .footer-logo {
-    margin: 0 auto 0.5em 0;
-    display: block;
-    width: 90%;
-  }
-  .join_us {
-    margin-top: 3em;
-  }
-  .haven_img_banner {
-    padding-top: 1em !important;
-  }
-  .deneb_footer .copyright_area .copyright_text,
-.copyright_text_icons {
-    width: 100%;
-    text-align: center;
-    float: none;
-  }
+.deneb_cta .cta_wrapper .cta_content h3:after {
+  content: "";
+  display: block;
+  /* background: url(../images/shape/line_2.png) no-repeat; */
+  max-width: 110px;
+  height: 2px;
+  margin-top: 13px;
+  margin-bottom: 24px;
 }
-@media screen and (max-width: 1032px) {
-  .coin_row {
-    width: 100%;
-    margin: auto;
-    margin: auto 1em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .widget_Details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    align-content: space-around;
-  }
-  .coin_row img {
-    display: block;
-    margin: auto;
-  }
-  .price_widget,
-.green,
-.red {
-    text-align: center;
-  }
-  .coin_name_widget {
-    font-size: 1em;
-    text-align: left;
-    font-weight: bold;
-    margin: 0.3em 0;
-    display: block;
-    padding-left: 0;
-    border: none !important;
-  }
-  .banner_text h1 br {
-    display: block;
-  }
-  .banner_text h1 {
-    text-align: center;
-    display: block;
-    margin: auto;
-    font-size: 3em;
-    width: 100%;
-  }
-  .banner_text p {
-    text-align: center;
-    display: block;
-    width: 100%;
-    padding-top: 1em;
-    margin: auto !important;
-  }
-  .banner_btn,
-.purple_btn_normal_outlined {
-    margin: 1em auto !important;
-    text-align: center !important;
-    display: block !important;
-  }
-  .purple_btn_normal_outlined {
-    margin-top: 1em !important;
-  }
-  .haven_img_banner img {
-    width: 90%;
-    margin: auto;
-    display: block;
-  }
-  .Join_over {
-    display: flex;
-    flex-direction: column;
-  }
-  .Join_over_img {
-    order: 2;
-  }
-  .top_Cryptocurrency {
-    padding-top: 2em;
-  }
+
+.deneb_cta .cta_wrapper .cta_content p {
+  color: #fff;
 }
+
+.deneb_cta .cta_wrapper .button_box {
+  float: right;
+}
+
 @media screen and (max-width: 1200px) {
+  .coin_id_market_details {
+    margin-top: 2em;
+  }
   .banner_btn,
 .purple_btn_normal_outlined {
     margin: 1em auto !important;
@@ -1314,7 +1287,132 @@ input:focus {
     padding-top: 1em;
   }
 }
+@media (max-width: 1107px) {
+  .CreateWallets .col25 {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    width: 100% !important;
+  }
+  .CreateWallets img {
+    width: 40%;
+    margin: auto;
+  }
+  .purple_btn_normal_outlined {
+    border-color: #c7006b !important;
+    padding: 10px 10px;
+    display: inline-block;
+    font-size: 15px;
+    background-color: transparent !important;
+    font-weight: 600;
+    border-radius: 7px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: black !important;
+  }
+  .count_up .countUp_span {
+    font-size: 0.6em;
+    font-weight: 700;
+  }
+  .footer-logo {
+    margin: 0 auto 0.5em 0;
+    display: block;
+    width: 90%;
+  }
+  .join_us {
+    margin-top: 3em;
+  }
+  .haven_img_banner {
+    padding-top: 1em !important;
+  }
+  .deneb_footer .copyright_area .copyright_text,
+.copyright_text_icons {
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+}
+@media screen and (max-width: 1032px) {
+  .coin_row {
+    width: 100%;
+    margin: auto;
+    margin: auto 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .widget_Details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: space-around;
+  }
+  .coin_row img {
+    display: block;
+    margin: auto;
+  }
+  .price_widget,
+.green,
+.red {
+    text-align: center;
+  }
+  .coin_name_widget {
+    font-size: 1em;
+    text-align: left;
+    font-weight: bold;
+    margin: 0.3em 0;
+    display: block;
+    padding-left: 0;
+  }
+  .banner_text h1 br {
+    display: block;
+  }
+  .banner_text h1 {
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: 3em;
+    width: 100%;
+  }
+  .banner_text p {
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding-top: 1em;
+    margin: auto !important;
+  }
+  .banner_btn,
+.purple_btn_normal_outlined {
+    margin: 1em auto !important;
+    text-align: center !important;
+    display: block !important;
+  }
+  .purple_btn_normal_outlined {
+    margin-top: 1em !important;
+  }
+  .haven_img_banner img {
+    width: 90%;
+    margin: auto;
+    display: block;
+  }
+  .Join_over {
+    display: flex;
+    flex-direction: column;
+  }
+  .Join_over_img {
+    order: 2;
+  }
+  .top_Cryptocurrency {
+    padding-top: 2em;
+  }
+}
 @media (max-width: 767px) {
+  .price_chart_id_coin {
+    font-size: 1em;
+  }
   .news_home .latest_news {
     font-size: 1.4em;
   }
@@ -1323,6 +1421,9 @@ input:focus {
   }
 }
 @media screen and (max-width: 500px) {
+  .nav-tabs .nav-link {
+    font-size: 0.7em;
+  }
   .post_head header {
     font-size: 0.8em;
   }
@@ -1336,25 +1437,10 @@ input:focus {
     padding-top: 2em;
   }
 }
-.deneb_cta .cta_wrapper .cta_content h3:after {
-  content: "";
-  display: block;
-  /* background: url(../images/shape/line_2.png) no-repeat; */
-  max-width: 110px;
-  height: 2px;
-  margin-top: 13px;
-  margin-bottom: 24px;
-}
-
-.deneb_cta .cta_wrapper .cta_content p {
-  color: #fff;
-}
-
-.deneb_cta .cta_wrapper .button_box {
-  float: right;
-}
-
 @media screen and (max-width: 579px) {
+  .banner_text {
+    margin-top: 2em;
+  }
   .red,
 .green {
     font-size: 1em;
@@ -1431,6 +1517,10 @@ input:focus {
   }
 }
 @media screen and (max-width: 384px) {
+  .price_change_percentage_1h_in_currency_id header {
+    font-size: 1em;
+    padding-top: 1em;
+  }
   .widget_Details {
     padding: 0 0.2em;
   }

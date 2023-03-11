@@ -28,7 +28,7 @@ const QUERY = gql`
 
 const index = () => {
   return (
-    <div>
+    <div className=" container-xxl">
       <HeroBanner />
       <Home />
     </div>

@@ -3,11 +3,10 @@ import CreateWallets from '../components/CreateWallet/CreateWallet'
 
 function CreateWallet() {
   return (
-    <div className='container'>  
-<CreateWallets/>
-
+    <div className="container-xxl">
+      <CreateWallets />
     </div>
-  )
+  );
 }
 
 export default CreateWallet

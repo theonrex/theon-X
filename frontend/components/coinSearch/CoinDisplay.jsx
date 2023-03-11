@@ -3,56 +3,36 @@ import axios from "axios";
 import Link from "next/link";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
-import { useRouter } from "next/router";
-import { Sparklines, SparklinesLine } from "react-sparklines";
 // import Pagenations from "../pagenation/pagenation"
 const CoinDisplay = () => {
   const [markets, setMarkets] = useState([]);
   const [filteredCoins, setFilteredCoins] = useState(markets);
   const [search, setSearch] = useState("");
-  const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(10);
-  const [display, setDisplay] = useState([]);
-  const router = useRouter();
-  //get data from coingecko
-  useEffect(() => {
-    ["characters", page],
-      axios
-        .get(`https://api.coingecko.com/api/v3/search?query=${display}`)
-        .then((res) => {
-          setMarkets(res.data);
-        })
-        .catch((error) => console.log(error));
-  }, [page]);
-  //search
+  // search logic
+
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
 
   useEffect(() => {
-    setFilteredCoins(
-      markets?.coins?.filter(
-        (coin) =>
-          coin.name.toLowerCase().includes(search.toLowerCase()) ||
-          coin.symbol.toLowerCase().includes(search.toLowerCase())
-      )
-    );
+    const fetchData = async () => {
+      if (search) {
+        const res = await axios.get(
+          `https://api.coingecko.com/api/v3/search?query=${search}`
+        );
+        const marketsData = res.data;
+        const filteredData = marketsData?.coins?.filter(
+          (coin) =>
+            coin.name.toLowerCase().includes(search.toLowerCase()) ||
+            coin.symbol.toLowerCase().includes(search.toLowerCase())
+        );
+        setFilteredCoins(filteredData);
+      } else {
+        setFilteredCoins([]);
+      }
+    };
+    fetchData();
   }, [search]);
-
-  useEffect(() => {
-    setFilteredCoins(markets?.coins);
-  }, [markets?.coins]);
-
-  //hander pagenation
-
-  //paganation control
-  useEffect(() => {
-    if (router.query.page) {
-      setPage(parseInt(router.query.page));
-    }
-  }, [router.query.page]);
 
   //modal
   const values = [true];
@@ -68,7 +48,6 @@ const CoinDisplay = () => {
     // 👇️ prevent page refresh
     event.preventDefault();
 
-    console.log("form submitted ");
   };
 
   return (

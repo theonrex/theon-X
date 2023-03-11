@@ -44,10 +44,9 @@ const CryptoData = () => {
 		coin.name.toLowerCase().includes(search.toLowerCase())
 	);
 
-	console.log(filteredMarkets);
 
 	return (
-    <div className="container-xxl col100">
+    <div className="container col100">
       <div className="">
         <h2 className="top_Cryptocurrency container-xxl purple_text">
           {" "}

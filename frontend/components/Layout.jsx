@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 import Head from "next/head";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 //children is used to display the layout exported to /pages/_app.js
 function Layout({ children }) {
-	return (
+  return (
     <div>
       <div className="layout  dark__mode">
         <Head>
           <meta
             name="description"
-            content="Olawande Armstrong Portfolio Website"
+            content="Welcome to Theon-X, your go-to source for all things Blockchain. Our website is designed to provide you with everything you need to stay up-to-date on the world of digital currencies, from real-time price updates to the latest news and articles."
           />
           <link
             rel="stylesheet"
@@ -24,7 +24,7 @@ function Layout({ children }) {
         <header>
           <NavBar />
         </header>
-        <main className="container-xxl">{children}</main>
+        <main className="">{children}</main>
         <footer>
           <Footer />
         </footer>
@@ -33,4 +33,4 @@ function Layout({ children }) {
   );
 }
 
-export default Layout
+export default Layout;

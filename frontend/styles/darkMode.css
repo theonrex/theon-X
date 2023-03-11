@@ -1,12 +1,14 @@
 .light{
     background-color: white ;
 }
-.dark{
-        background-color: rgb(21, 21, 21) ;
+.dark,
+.dark body { 
+        background-color: #050505 ;
 }
 
+
 .dark .deneb_footer .widget_wrapper{
-    background-color: rgb(21, 21, 21);
+    background-color: #050505;
 }
 .dark h1,
 .dark tr,
@@ -18,7 +20,10 @@
 .dark a,
 .dark header,
 .dark .css-165lrpn-MuiButtonBase-root-MuiPaginationItem-root,
-.dark .blog_current_title
+.dark .blog_current_title,
+.dark h5,
+.dark h6,
+.dark h4
 {
     color: white ;
 }
@@ -28,19 +33,39 @@
     background: transparent;
     -webkit-text-fill-color: unset;
 }
+.dark .coin_id_market_details p,
+.dark p,
+.dark button,
+.dark body,
+.dark th,
+.dark h5,
+.dark h6,
+.dark h4,
+.dark h1 
+{
+    font-weight: normal !important;
+}
 
 .dark .purple_btn_normal_outlined a{
     color: white !important;
     font-weight: 400;
 }
 
-.dark .count_up h1 span{
-    color: white;
+.dark .count_up h1 span,
+.dark .offcanvas-title {
+    color: white !important;
 }
+.dark .offcanvas {
+    background-color: #050505 !important;
+    outline: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+
 
 .dark span,
 .dark .authors_job_description {
-    color: rgb(98, 98, 98) ;
+    color: rgb(180, 180, 180) ;
 }
 .dark .stack_pagenation svg {
     fill: #c00569 !important;
@@ -48,6 +73,45 @@
 .dark .navbar-toggler-icon{
      filter: invert(100%); 
 
+}
+
+/* .dark button,
+.dark button:hover,
+.dark button:active,
+.dark button:focus, */
+.dark .navbar-light .navbar-toggler,
+.dark .navbar-toggler ,
+.dark .navbar-toggler :hover,
+.dark .navbar-toggler :active,
+.dark .navbar-toggler :focus,
+.dark .navbar-toggler ::after,
+.dark .navbar-toggler ::before    {
+    border-width: 0 !important;
+
+  outline: none !important;
+}
+
+.dark .Converter input{
+    color: white;
+}
+
+.dark .btn-close {
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: 0.25em 0.25em;
+    color: #fff;
+    background-color: white;
+    border: 0;
+    border-radius: 0.375rem;
+    opacity: 1;
+}
+
+.dark .navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, 0) !important;
+    margin-right: 0.2em;
+    border-color: rgba(255, 255, 255, 0.97) !important;
+    border-color: rgba(255, 255, 255, 0.69) !important;
 }
 .dark .navbar-light .navbar-toggler {
     border: none;
@@ -90,14 +154,37 @@ color: #c00569 !important;
 }
 
 
-.dark .green{
-    color: green;
+.dark .green,
+.dark .green_id,
+.dark .green_id .bi,
+.dark .green_id_change {
+    color: green !important;
 }
-.dark .red{
-    color: red;
+.dark .red,
+.dark .red_id_change,
+.dark .red_id {
+    color: red !important;
 }
 
 .dark .post_body {
     padding: 0 !important;
     box-shadow: 0px 0px 28px 6px #bfbfbf1a;
+}
+
+.dark .news_boxs {
+  padding: 0 !important;
+  margin: 1.5em 0 !important;
+  border-radius: 1em !important;
+  -webkit-box-shadow: 2px 2px 26px -3px #6565653d;
+  -moz-box-shadow: 2px 2px 26px -3px #6565653d;
+  box-shadow: 2px 2px 26px -3px #6565653d;
+}
+
+.dark .overview{
+  padding-top: 1em;
+  padding-bottom: 1em;
+    background-color: #000000;
+    background-image: 
+        radial-gradient(at 47% 33%, #050005 0, transparent 59%), 
+        radial-gradient(at 82% 65%, #0f000a 0, transparent 55%);
 }

@@ -4,9 +4,7 @@ import "@etchteam/next-pagination/dist/index.css";
 import { Layout } from "../components";
 import "../styles/main.css";
 import "../styles/globals.css";
-import "../styles/darkMode.css"
-import { SSRProvider } from "../ssr-provider";
-import { useForm } from "react-hook-form";
+import "../styles/darkMode.css";
 
 //auth
 import {
@@ -17,6 +15,7 @@ import {
 } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 import { SessionProvider } from "next-auth/react";
+import { SSRProvider } from "@react-aria/ssr";
 
 const { provider, webSocketProvider } = configureChains(defaultChains, [
   publicProvider(),
@@ -40,7 +39,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <Layout >
+    <Layout>
       <Component {...pageProps} />
     </Layout>
   );

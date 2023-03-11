@@ -5,6 +5,8 @@ export default function Author({ authorsName, avatar }) {
   return (
     <div className="rowx">
       <section className="mag_3">
+        <hr />
+
         <div className="authors_avatar">
           <img src={avatar.url} alt={`${authorsName} image`} />
           <section>

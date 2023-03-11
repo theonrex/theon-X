@@ -4,7 +4,7 @@ $maincolor: #c00569;
 .bi-search {
   color: #ffffff !important;
 }
-.light__mode{
+.light__mode {
   background-color: #c00569;
 }
 .bi-search::before {
@@ -52,8 +52,8 @@ input:focus {
 .haven_img_banner_Nft {
   margin-top: 2em;
 }
-.purple_btn_normal{
-  padding: 12em ;
+.purple_btn_normal {
+  padding: 12em;
 }
 .banner_btn {
   padding: 1em;
@@ -69,7 +69,7 @@ input:focus {
 }
 .global_total_market_cap span {
   font-size: 0.8em;
-  color: green;
+  color: hsl(120, 100%, 25%);
 }
 .CoinDisplay_data {
   display: flex;
@@ -84,7 +84,78 @@ input:focus {
   font-size: 1em;
   font-weight: 500;
 }
+//Converter
+
+.Converter header {
+  font-size: 1.5em;
+  padding: 1em 0;
+
+  text-transform: capitalize;
+}
+.Converter form {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+}
+.coin_id_converter {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+}
+.coin_id_currency {
+  text-transform: capitalize;
+
+  display: flex;
+  flex-direction: column;
+}
+.Converter label {
+}
+
+.Converter input {
+  margin: 1em 0;
+  border: none;
+  background-color: rgba(255, 173, 243, 0.24);
+}
+.Converter select {
+  background-color: $maincolor;
+  border: none;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(3, 2, 2, 0) !important;
+  border-radius: 4px;
+  padding: 6px 10px;
+  width: 30%;
+    margin-right: 1em;
+
+}
+
+.Converter select:focus,
+.Converter select:active,
+.Converter select:checked,
+.Converter select:hover {
+  background-color: $maincolor;
+  border: none;
+  outline: none !important;
+
+  border-width: 1em;
+  border-style: none;
+  border-color: rgba(0, 0, 0, 0) !important;
+  border-image: initial;
+  border-radius: 0px;
+}
+
+.Converter option:checked {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
 //crypto widget
+#tradingview_3cf2d-wrapper,
+#tv-chart-container {
+  background-color: #00000021;
+  height: 32em !important;
+}
 .widget_scroll {
   display: flex;
 }
@@ -98,31 +169,30 @@ input:focus {
 .widget_container {
   display: flex;
 }
-  .coin_row {
-      width: 100%;
-    margin: auto;
-    margin: auto 1em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;}
+.coin_row {
+  width: 100%;
+  margin: auto;
+  margin: auto 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
 .coin_row img {
   width: 60px;
   padding: 0 1em;
 }
 .red_id {
-  background-color: red;
-  color: white;
-  padding: 0.3em 0.5em;
-  font-size: 1em;
+  color: red;
+  font-size: 0.8em;
   border-radius: 0.5em;
+  font-weight: 600;
 }
 
 .green_id {
-  background-color: green;
-  color: white;
-  padding: 0.3em 0.5em;
-  font-size: 1em;
+  font-weight: 600;
+  color: green;
+  font-size: 0.8em;
   border-radius: 0.5em;
 }
 .price_widget {
@@ -182,11 +252,11 @@ input:focus {
 }
 .features_mg .col30 {
   margin: 0 1em;
-display: flex;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 .features_header {
   font-size: 3em;
@@ -247,8 +317,7 @@ display: flex;
 }
 
 //blog
-.authors_avatar{
-
+.authors_avatar {
 }
 .product_card {
   width: 100%;
@@ -259,7 +328,6 @@ display: flex;
   border-radius: 1em;
 }
 .product_card h1 {
-  
   font-size: 1.5em;
   font-weight: bold;
   text-transform: capitalize;
@@ -284,44 +352,44 @@ display: flex;
 }
 
 //blog author
-.post_body{
+.post_body {
   padding: 0 !important;
-  box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 28px 6px rgba(0, 0, 0, 0.1);
 }
-.Blog_post h2{
+.Blog_post h2 {
   color: #c7006b;
   background: #c7006b;
   background: linear-gradient(to right, #640093e3 22%, #c7006b 74%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-font-size: 1.9em;
-text-decoration: underline;
-font-weight: 700;
-text-transform: uppercase;
+  font-size: 1.9em;
+  text-decoration: underline;
+  font-weight: 700;
+  text-transform: uppercase;
 }
-.mag_3{
+.mag_3 {
   padding: 0.5em 1em;
 }
-.authorsName{
+.authorsName {
   color: #c00569;
   font-weight: 700;
   font-size: 1.2em;
 }
 .authors_avatar {
-display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
 }
-.authors_avatar p{
+.authors_avatar p {
   text-transform: capitalize;
 }
-.authors_job_description{
+.authors_job_description {
   font-size: 0.86em;
 }
-.authors_avatar img{
+.authors_avatar img {
   width: 40px;
   margin-right: 1em;
   border-radius: 50%;
@@ -345,7 +413,7 @@ display: flex;
   margin: auto;
   padding-top: 1em;
 }
-.blog_body{
+.blog_body {
   font-size: 1.2em;
 }
 .blog_current_title {
@@ -368,7 +436,7 @@ display: flex;
 //coin table
 
 @media screen and (max-width: 1200px) {
-  .theme_nav{
+  .theme_nav {
     display: none;
   }
   .sparkline_in_7d,
@@ -379,7 +447,7 @@ display: flex;
     display: none;
   }
 
-  .Join_over{
+  .Join_over {
     display: flex !important;
   }
 }
@@ -431,6 +499,17 @@ display: flex;
 }
 .coinPageId img {
   width: 30px;
+}
+.nav-tabs{
+  padding-bottom: 2em;
+}
+.nav-tabs,
+
+.nav-tabs:hover,
+.nav-tabs .nav-link:hover {
+  border: none !important;
+  color: #c00569;
+  border-color: rgba(0, 0, 0, 0) !important;
 }
 .coinId_Price {
 }
@@ -495,16 +574,15 @@ display: flex;
   margin-right: 1em;
 }
 .coin_Id_price {
-    display: flex;
-    justify-items: center;
-    align-items: flex-start;
-    flex-direction: row;
-    align-content: space-around;
+  display: flex;
+  justify-items: center;
+  flex-direction: row;
+  align-content: space-around;
+  align-items: baseline;
 }
 .coin_Id_price h1 {
-  padding-right: 0.4em;
+  margin-right: 0.3em;
 
-  margin-right: 0.2em;
   font-size: 2em;
   font-weight: 500;
   font-size: 1.5em;
@@ -525,9 +603,7 @@ display: flex;
 .Information header {
   font-size: 1.5em;
 }
-.coin_id_market_details {
-  padding-top: 1em;
-}
+
 .coin_id_market_details p {
   display: flex;
   font-size: 1em;
@@ -620,7 +696,6 @@ display: flex;
   .red_id_change,
   .green_id_change {
     color: white;
-    padding: 0.2em 0.4em;
     font-size: 0.6em;
     border-radius: 0.5em;
   }
@@ -685,15 +760,13 @@ display: flex;
 
 //price change percentage
 .red_id_change {
-  background-color: red;
-  color: white;
+  color: red;
   padding: 0.3em 0.7em;
   font-size: 1em;
   border-radius: 0.5em;
 }
 .green_id_change {
-  background-color: green;
-  color: white;
+  color: green;
   padding: 0.3em 0.4em;
   font-size: 1em;
   border-radius: 0.5em;
@@ -728,8 +801,7 @@ display: flex;
   border-style: solid !important;
   border-width: 1px !important;
   padding: 1em 0 !important;
-    color: black !important;
-
+  color: black !important;
 }
 
 .price_change_percentage_1h_in_currency_id td,
@@ -743,6 +815,11 @@ display: flex;
 .price_change_percentage_table th {
   text-align: center;
 }
+.overview {
+  background-color: #fdfdfd;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 .Description {
   padding-bottom: 2em;
 }
@@ -752,9 +829,8 @@ display: flex;
 @media (max-width: 1007px) {
   .red_id_change,
   .green_id_change {
-    color: white;
-    padding: 0.2em 0.4em;
-    font-size: 0.7em;
+    padding: 1em 5%;
+    font-size: 0.9em;
     border-radius: 0.5em;
   }
 }
@@ -830,7 +906,6 @@ display: flex;
   width: 100%;
 }
 .news_bg {
-
 }
 .news_text {
   padding: 1em 2em;
@@ -851,18 +926,6 @@ display: flex;
   -moz-box-shadow: 2px 2px 26px -3px rgba(0, 0, 0, 0.24);
   box-shadow: 2px 2px 26px -3px rgba(0, 0, 0, 0.24);
 }
-
-// .market_cap_rank{
-//     width: 2% !important;
-//         font-size: 1em !important;
-//         font-weight: normal;
-// }
-// .market_cap_rank h4{
-//     font-size: 1em;
-//         width: 2%;
-// }
-//footer
-/*footer*/
 
 .deneb_footer .widget_wrapper {
   background-repeat: no-repeat;
@@ -1052,6 +1115,158 @@ display: flex;
   font-weight: bold;
 }
 
+.deneb_cta .cta_wrapper .cta_content h3:after {
+  content: "";
+  display: block;
+  /* background: url(../images/shape/line_2.png) no-repeat; */
+  max-width: 110px;
+  height: 2px;
+  margin-top: 13px;
+  margin-bottom: 24px;
+}
+
+.deneb_cta .cta_wrapper .cta_content p {
+  color: #fff;
+}
+
+.deneb_cta .cta_wrapper .button_box {
+  float: right;
+}
+
+//media
+
+@media screen and (max-width: 1200px) {
+  .coin_id_market_details {
+  margin-top: 2em;
+}
+  .banner_btn,
+  .purple_btn_normal_outlined {
+    margin: 1em auto !important;
+    text-align: center !important;
+    display: block !important;
+  }
+  .haven_img_banner img {
+    width: 90%;
+  }
+  .hero_h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+  .hero_p .purple_text {
+    text-align: center;
+  }
+  .hero_p {
+    text-align: center;
+    margin: auto !important;
+  }
+
+  //  .purple_btn_normal_outlined{
+  // margin-left: 1em;
+  //  }
+  .haven_img_banner img {
+    margin: auto;
+    display: block;
+  }
+  .create_portfolio h1 {
+    font-size: 1.3em;
+  }
+  .features_col30 {
+    width: 50%;
+    float: left;
+  }
+  .features_col30_rowx {
+    display: flex;
+  }
+  .features_img img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .features_text h1 {
+    padding-top: 0.3em;
+  }
+  .features_middle {
+    order: 1;
+  }
+  .banner_news .hero_h1,
+  .banner_news .hero_p {
+    text-align: center;
+    // width: 100%;
+    margin: auto;
+  }
+  .create_portfolio {
+    margin: auto;
+  }
+  .banner_news_col1_5 .col1_5 {
+    margin: auto;
+    width: 30%;
+  }
+
+  .banner_news_col1_5 .col7 {
+    margin: auto;
+    width: 70%;
+  }
+  .banner_news_col1_5 {
+    display: flex !important;
+    flex-direction: row-reverse;
+    // padding-bottom: 2em;
+  }
+
+  .create_portfolio img {
+    width: 90px;
+    display: block;
+  }
+  .banner_news_col1_5 p,
+  .banner_news_col1_5 h1 {
+    text-align: center;
+  }
+  .count_up .col25 {
+    width: 25%;
+    text-align: center;
+  }
+  .author_section {
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  .author_section h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+  .author_section img {
+    width: 20%;
+  }
+  .features_text p {
+    text-align: center;
+    padding-bottom: 2em;
+  }
+  // .create_portfolio {
+  //   padding-top: 2em;
+  // }
+  .haven_img_banner_Nft img {
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+  .features_mg .col30 {
+    margin: auto;
+  }
+  .blog_current_title {
+    font-size: 1.9em;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    padding-top: 1em;
+  }
+}
 @media (max-width: 1107px) {
   .CreateWallets .col25 {
     display: flex;
@@ -1102,424 +1317,265 @@ display: flex;
 
 @media screen and (max-width: 1032px) {
   .coin_row {
-width: 100%;
+    width: 100%;
     margin: auto;
     margin: auto 1em;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;}
+    justify-content: flex-start;
+  }
 
-    .widget_Details {
+  .widget_Details {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     align-content: space-around;
-    }
-    .coin_row img {
-      display: block;
-      margin: auto;
-    }
-    .price_widget,
-    .green,
-    .red {
-      text-align: center;
-    }
-    .coin_name_widget {
-      font-size: 1em;
-      text-align: left;
-      font-weight: bold;
-      margin: 0.3em 0;
-      display: block;
-      padding-left: 0;
-      border: none !important;
-    }
-    .banner_text h1 br {
-      display: block;
-    }
-
-    .banner_text h1 {
-      text-align: center;
-      display: block;
-      margin: auto;
-      font-size: 3em;
-      width: 100%;
-    }
-    .banner_text p {
-      text-align: center;
-      display: block;
-      width: 100%;
-      padding-top: 1em;
-      margin: auto !important;
-    }
-    .banner_btn,
-    .purple_btn_normal_outlined {
-      margin: 1em auto !important;
-      text-align: center !important;
-      display: block !important;
-    }
-    .purple_btn_normal_outlined {
-      margin-top: 1em !important;
-    }
-    .haven_img_banner img {
-      width: 90%;
-      margin: auto;
-      display: block;
-    }
-
-    .Join_over {
-      display: flex;
-      flex-direction: column;
-    }
-    .Join_over_img {
-      order: 2;
-    }
-    .top_Cryptocurrency {
-      padding-top: 2em;
-    }
-  
-  
-  
   }
-  @media screen and (max-width: 1200px) {
-        .banner_btn,
-    .purple_btn_normal_outlined {
-      margin: 1em auto !important;
-      text-align: center !important;
-      display: block !important;
-    }
-    .haven_img_banner img {
-      width: 90%;
-    }
-    .hero_h1 {
-      font-size: 3em;
-      text-align: center;
-    }
-    .hero_p .purple_text {
-      text-align: center;
-    }
-    .hero_p {
-      text-align: center;
-      margin: auto !important;
-    }
-
-    //  .purple_btn_normal_outlined{
-    // margin-left: 1em;
-    //  }
-    .haven_img_banner img {
-      margin: auto;
-      display: block;
-    }
-    .create_portfolio h1 {
-      font-size: 1.3em;
-    }
-    .features_col30 {
-      width: 50%;
-      float: left;
-    }
-    .features_col30_rowx {
-      display: flex;
-    }
-    .features_img img {
-      width: 80%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .features_text h1 {
-      padding-top: 0.3em;
-    }
-    .features_middle {
-      order: 1;
-    }
-    .banner_news .hero_h1,
-    .banner_news .hero_p {
-      text-align: center;
-      // width: 100%;
-      margin: auto;
-    }
-    .create_portfolio {
-      margin: auto;
-    }
-    .banner_news_col1_5 .col1_5 {
-      margin: auto;
-      width: 30%;
-    }
-
-    .banner_news_col1_5 .col7 {
-      margin: auto;
-      width: 70%;
-    }
-    .banner_news_col1_5 {
-      display: flex !important;
-      flex-direction: row-reverse;
-      // padding-bottom: 2em;
-    }
-
-    .create_portfolio img {
-      width: 90px;
-      display: block;
-    }
-    .banner_news_col1_5 p,
-    .banner_news_col1_5 h1 {
-      text-align: center;
-    }
-    .count_up .col25 {
-      width: 25%;
-      text-align: center;
-    }
-    .author_section {
-      padding-top: 1em;
-      padding-bottom: 1.5em;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: center;
-      align-content: center;
-    }
-    .author_section h3 {
-      font-size: 1.5em;
-      margin-top: 0;
-    }
-    .author_section img {
-      width: 20%;
-    }
-    .features_text p {
-      text-align: center;
-      padding-bottom: 2em;
-    }
-    // .create_portfolio {
-    //   padding-top: 2em;
-    // }
-    .haven_img_banner_Nft img {
-      width: 90%;
-      display: block;
-      margin: auto;
-    }
-    .features_mg .col30 {
-      margin: auto;
-    }
-    .blog_current_title {
-      font-size: 1.9em;
-      font-weight: 700;
-      text-transform: capitalize;
-      text-align: center;
-      width: 70%;
-      margin: auto;
-      padding-top: 1em;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .news_home .latest_news {
-      font-size: 1.4em;
-    }
-    .deneb_cta .cta_wrapper .cta_content h3 {
-      font-size: 24px;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .post_head header {
-      font-size: 0.8em;
-    }
-  
-    .overlay_marquee {
-      --gradient-width: 20px;
-    }
-    .home_banner_btn_div {
-      text-align: center;
-      margin: auto;
-      display: block;
-      padding-top: 2em;
-    }
-  }
-
-  .deneb_cta .cta_wrapper .cta_content h3:after {
-    content: "";
+  .coin_row img {
     display: block;
-    /* background: url(../images/shape/line_2.png) no-repeat; */
-    max-width: 110px;
-    height: 2px;
-    margin-top: 13px;
-    margin-bottom: 24px;
+    margin: auto;
   }
-
-  .deneb_cta .cta_wrapper .cta_content p {
-    color: #fff;
+  .price_widget,
+  .green,
+  .red {
+    text-align: center;
   }
-
-  .deneb_cta .cta_wrapper .button_box {
-    float: right;
-  }
-
-  //media
-
-  @media screen and (max-width: 579px) {
-    .red,
-    .green {
-      font-size: 1em;
-    }
-  
-
-    .widget_Details .red,
-    .widget_Details .green {
-      font-size: 0.7em;
-    }
-
-    .coin_row .coin_name_widget {
-      font-size: 0.9em !important;
-    }
-    .widget_container {
-      padding: 0 !important;
-    }
-
-    .banner_text h1 {
-      text-align: center;
-      font-size: 2em;
-      width: 100%;
-    }
-
-    .banner_news_col1_5 h1 {
-      font-size: 1.3em;
-    }
-    .banner_text p {
-      text-align: center;
-      display: block;
-      width: 100%;
-      margin: auto !important;
-      padding-top: 1em;
-    }
-    .home_banner_btn_div {
-      text-align: center;
-      padding-top: 2em;
-    }
-    .hero_p {
-      padding-bottom: 2em;
-    }
-    .banner_btn {
-      margin: auto;
-      text-align: center;
-      display: block;
-    }
-    .features_col30 {
-      width: 100%;
-    }
-    .features_col30_rowx {
-      display: block;
-    }
-    .count_up {
-      margin: 2em 0;
-      padding: 2em 1em;
-    }
-    .count_up h1 {
-      font-size: 1.3em;
-      text-align: center;
-    }
-    .banner_btn {
-      margin: 1em auto;
-      text-align: center;
-      display: block !important;
-    }
-    .home_banner_btn_div {
-      text-align: center;
-      padding-top: 0;
-    }
-  }
-
-  @media screen and (max-width: 404px) {
-    .count_up {
-      margin: 2em 0;
-      padding: 2em 0.2em;
-    }
-    .count_up h1 {
-      font-size: 1em;
-      text-align: center;
-    }
-  }
-
-  @media screen and (max-width: 384px) {
-
-    .widget_Details {
-    padding: 0 0.2em;
-}
-    .Blog_post h2{
-      font-size: 1.5em;
-    }
-    .table_tr_id th {
-      text-align: center !important;
-    }
-    .price_widget,
-    .green,
-    .red {
-      text-align: center;
-    }
-    
-  
-
-  
-
-    .create_portfolio img {
-      width: 50px;
-      margin: auto;
-      display: block;
-    }
-    .create_portfolio {
-      width: 100%;
-    }
-    .banner_news_col1_5 h1 {
-      text-align: left;
-    }
-    .banner_news_col1_5 p {
-      text-align: center;
-      width: 100%;
-      font-size: 0.9em;
-      padding-bottom: 1em;
-    }
-    .features_header {
-      font-size: 1.6em;
-      padding: 2em 0 0 0;
-      text-align: center;
-      font-weight: bold;
-    }
-    .features_text h1 {
-      text-align: center;
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-    .banner_text h1 {
-      text-align: center;
-      width: 100%;
-    }
-    // .coin_name_widget {
-    //   display: flex;
-    //   font-size: 1em;
-    //   font-weight: bold;
-    //   margin: 0 0 0.5em 0;
-    //   flex-direction: row;
-    //   flex-wrap: nowrap;
-    //   align-content: center;
-    //   justify-content: space-around;
-    //   align-items: baseline;
-    //   padding-left: 0;
-    //   border: none !important;
-    // }
-  }
-
-  
-    @media screen and (max-width: 254px) {
-
-      .post_head header {
-    font-size: 0.6em;
-}}
-
-    @media screen and (max-width: 224px) {
-
-      .post_head header {
-    font-size: 0.8em;
-}
-    .Blog_post h2 {
+  .coin_name_widget {
     font-size: 1em;
-}
+    text-align: left;
+    font-weight: bold;
+    margin: 0.3em 0;
+    display: block;
+    padding-left: 0;
   }
+  .banner_text h1 br {
+    display: block;
+  }
+
+  .banner_text h1 {
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: 3em;
+    width: 100%;
+  }
+  .banner_text p {
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding-top: 1em;
+    margin: auto !important;
+  }
+  .banner_btn,
+  .purple_btn_normal_outlined {
+    margin: 1em auto !important;
+    text-align: center !important;
+    display: block !important;
+  }
+  .purple_btn_normal_outlined {
+    margin-top: 1em !important;
+  }
+  .haven_img_banner img {
+    width: 90%;
+    margin: auto;
+    display: block;
+  }
+
+  .Join_over {
+    display: flex;
+    flex-direction: column;
+  }
+  .Join_over_img {
+    order: 2;
+  }
+  .top_Cryptocurrency {
+    padding-top: 2em;
+  }
+}
+
+@media (max-width: 767px) {
+  .price_chart_id_coin {
+    font-size: 1em;
+  }
+  .news_home .latest_news {
+    font-size: 1.4em;
+  }
+  .deneb_cta .cta_wrapper .cta_content h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav-tabs .nav-link {
+    font-size: 0.7em;
+  }
+  .post_head header {
+    font-size: 0.8em;
+  }
+
+  .overlay_marquee {
+    --gradient-width: 20px;
+  }
+  .home_banner_btn_div {
+    text-align: center;
+    margin: auto;
+    display: block;
+    padding-top: 2em;
+  }
+}
+
+@media screen and (max-width: 579px) {
+  .banner_text {
+    margin-top: 2em;
+  }
+  .red,
+  .green {
+    font-size: 1em;
+  }
+
+  .widget_Details .red,
+  .widget_Details .green {
+    font-size: 0.7em;
+  }
+
+  .coin_row .coin_name_widget {
+    font-size: 0.9em !important;
+  }
+  .widget_container {
+    padding: 0 !important;
+  }
+
+  .banner_text h1 {
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+  }
+
+  .banner_news_col1_5 h1 {
+    font-size: 1.3em;
+  }
+  .banner_text p {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: auto !important;
+    padding-top: 1em;
+  }
+  .home_banner_btn_div {
+    text-align: center;
+    padding-top: 2em;
+  }
+  .hero_p {
+    padding-bottom: 2em;
+  }
+  .banner_btn {
+    margin: auto;
+    text-align: center;
+    display: block;
+  }
+  .features_col30 {
+    width: 100%;
+  }
+  .features_col30_rowx {
+    display: block;
+  }
+  .count_up {
+    margin: 2em 0;
+    padding: 2em 1em;
+  }
+  .count_up h1 {
+    font-size: 1.3em;
+    text-align: center;
+  }
+  .banner_btn {
+    margin: 1em auto;
+    text-align: center;
+    display: block !important;
+  }
+  .home_banner_btn_div {
+    text-align: center;
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 404px) {
+  .count_up {
+    margin: 2em 0;
+    padding: 2em 0.2em;
+  }
+  .count_up h1 {
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .price_change_percentage_1h_in_currency_id header {
+    font-size: 1em;
+    padding-top: 1em;
+  }
+
+  .widget_Details {
+    padding: 0 0.2em;
+  }
+  .Blog_post h2 {
+    font-size: 1.5em;
+  }
+  .table_tr_id th {
+    text-align: center !important;
+  }
+  .price_widget,
+  .green,
+  .red {
+    text-align: center;
+  }
+
+  .create_portfolio img {
+    width: 50px;
+    margin: auto;
+    display: block;
+  }
+  .create_portfolio {
+    width: 100%;
+  }
+  .banner_news_col1_5 h1 {
+    text-align: left;
+  }
+  .banner_news_col1_5 p {
+    text-align: center;
+    width: 100%;
+    font-size: 0.9em;
+    padding-bottom: 1em;
+  }
+  .features_header {
+    font-size: 1.6em;
+    padding: 2em 0 0 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  .features_text h1 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .banner_text h1 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 254px) {
+  .post_head header {
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 224px) {
+  .post_head header {
+    font-size: 0.8em;
+  }
+  .Blog_post h2 {
+    font-size: 1em;
+  }
+}

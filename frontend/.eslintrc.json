@@ -1,3 +1,13 @@
 {
-  "extends": ["next/babel", "next/core-web-vitals"]
+  "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:react/recommended"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "babelOptions": {
+      "presets": ["next/babel"]
+    }
+  },
+  "plugins": ["react"],
+  "rules": {
+    // your rules
+  }
 }

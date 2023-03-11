@@ -88,15 +88,6 @@ function NavBar() {
                       >
                         Coins{" "}
                       </Nav.Link>
-                      <Nav.Link
-												href="/contact"
-												className={`${
-													"underline" +
-													(router.pathname === "/contact" ? " active" : "")
-												} `}
-											>
-												Contact{" "}
-											</Nav.Link>
                     </Nav>
                     <Nav className="justify-content-end ">
                       <Nav.Link

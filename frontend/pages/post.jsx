@@ -62,7 +62,7 @@ export async function getStaticProps() {
 const blog = ({ posts, authors }) => {
 console.log(authors);
   return (
-    <div className=" container">
+    <div className=" container-xxl">
       <div className="post_head">
         <header>A collection of blog about Blockchain</header>
       </div>
