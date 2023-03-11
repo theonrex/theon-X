@@ -25,13 +25,21 @@
 .dark h6,
 .dark h4
 {
-    color: white ;
+    color: white !important;
 }
 .dark .banner_text .hero_p
 {
     color: white;
     background: transparent;
     -webkit-text-fill-color: unset;
+}
+
+.dark .css-165lrpn-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    color: #9c27b0 !important;
+  
+}
+.dark .modal-fullscreen .modal-content{
+    background-color: #000000;
 }
 .dark .coin_id_market_details p,
 .dark p,

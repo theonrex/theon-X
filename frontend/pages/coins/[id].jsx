@@ -39,8 +39,6 @@ const CoinData = dynamic(
 const CoinId = ({ coinPriceChart, coin }) => {
   const { id } = useParams();
 
-
-
   return (
     <div className="">
       <Topsection

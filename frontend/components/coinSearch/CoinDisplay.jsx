@@ -47,7 +47,6 @@ const CoinDisplay = () => {
   const handleSubmit = (event) => {
     // 👇️ prevent page refresh
     event.preventDefault();
-
   };
 
   return (
@@ -89,8 +88,8 @@ const CoinDisplay = () => {
                   <table>
                     <tbody>
                       <tr className="table_tr_id">
-                        <th className="market_cap_rank">No</th>
-                        <th className="market_cap_rank">Coin</th>
+                        <th className="market_cap_rank"></th>
+                        <th className="search_name"></th>
                       </tr>
 
                       {search &&
@@ -99,8 +98,32 @@ const CoinDisplay = () => {
                             <tr target="_blank" className="market_Hover">
                               <td className="market_cap_rank">
                                 <>{market.market_cap_rank}</>
-                              </td>
-                              <td className="coin_name_widget">
+                              </td>{" "}
+                              <td className="search_name">
+                                <Link
+                                  target="_blank"
+                                  passHref
+                                  rel="noopener noreferrer"
+                                  href={`/coins/${market.id}`}
+                                  key={market.id}
+                                >
+                                  <img src={market.thumb} alt="coin" />
+
+                                  <>{market.name}</>
+                                </Link>
+                              </td>{" "}
+                              <td className="search_name">
+                                <Link
+                                  target="_blank"
+                                  passHref
+                                  rel="noopener noreferrer"
+                                  href={`/coins/${market.id}`}
+                                  key={market.id}
+                                >
+                                  <>{market.symbol}</>
+                                </Link>
+                              </td>{" "}
+                              {/* <td className="market_cap_rank">
                                 <Link
                                   target="_blank"
                                   passHref
@@ -111,11 +134,9 @@ const CoinDisplay = () => {
                                   <div className="">
                                     <img src={market.thumb} alt="coin" />
                                   </div>
-                                  <h4 className="coin_name_widget_s">
-                                    {market.name}{" "}
-                                  </h4>
-                                </Link>
-                              </td>
+                                  <h4 className="">{market.name} </h4>
+                                </Link>{" "}
+                              </td> */}
                             </tr>
                           );
                         })}

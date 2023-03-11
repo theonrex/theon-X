@@ -429,8 +429,19 @@ input:focus {
 .market_data {
   padding-top: 3em;
 }
+.market_data form input{
+width: 50% ;
+margin: 0 auto 2em;
+}
+.search_name{
+  text-align: left !important;
+}
 .table_tr_id th {
   text-align: center !important;
+}
+.search_name img{
+  display: unset !important;
+  margin-right: 0.6em !important;
 }
 
 //coin table
@@ -1347,7 +1358,6 @@ input:focus {
     text-align: left;
     font-weight: bold;
     margin: 0.3em 0;
-    display: block;
     padding-left: 0;
   }
   .banner_text h1 br {
