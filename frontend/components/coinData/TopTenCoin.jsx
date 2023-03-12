@@ -17,14 +17,13 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
       })
       .catch((error) => console.log(error));
   }, []);
-  console.log(markets.circulating_supply);
   return (
     <div>
       TopTenCoin
       {markets.map((market) => {
         // <Link href={`/coins/${market.id}`} key={market.id}>
         <div>
-          <h1>{market} g</h1>
+          <h1>{market} </h1>
           <td className="market_cap_rank">
             <>{market.market_cap_rank}</>
           </td>

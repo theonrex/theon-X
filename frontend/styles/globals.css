@@ -162,7 +162,7 @@ font-family: 'Golos Text', sans-serif !important;}
 .col70 {
   width: 69.5%;
   float: left;
-  padding: 5px;
+  padding: 1em 3em 1em 0em; 
 }
 .col6{
   width: 49.5%;
@@ -384,6 +384,7 @@ canvas{
   color: white !important;
 }
 
+
 .nav-link {
   font-weight: bold !important;
   margin: auto 14px;
@@ -516,6 +517,10 @@ display: flex;
 .col25 {
     width: 100%;
     padding: 2px;
+  }
+
+  .overview .rowx{
+    display: block;
   }
   .navbar-nav .dark_hide_mobile {
     display: none !important;

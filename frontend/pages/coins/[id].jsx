@@ -38,6 +38,9 @@ const CoinData = dynamic(
 
 const CoinId = ({ coinPriceChart, coin }) => {
   const { id } = useParams();
+  console.log(coin?.tickers);
+
+  // console.log(coin)
 
   return (
     <div className="">
@@ -64,7 +67,7 @@ const CoinId = ({ coinPriceChart, coin }) => {
         market_cap_rank={coin.market_cap_rank}
         coinPriceChart={coinPriceChart}
         coin={coin}
-        // name={coin.name}
+        tickers={coin.tickers}
         // name={coin.name}
         // name={coin.name}
       />
@@ -72,6 +75,21 @@ const CoinId = ({ coinPriceChart, coin }) => {
       {/* Description */}
       <div className="Description container">
         <header>{coin.name} Description</header>
+        <section
+          className="coin_description"
+          dangerouslySetInnerHTML={{ __html: coin.description.en }}
+        ></section>
+        <hr />
+        <div className="votes_percentage">
+          <section className="sentiment_votes_up_percentage">
+            Positive Vote Rate Today: 
+            <span>{coin.sentiment_votes_up_percentage}%</span>{" "}
+          </section>
+          <section className="sentiment_votes_down_percentage">
+            Negative Vote Rate Today: 
+            <span>{coin.sentiment_votes_down_percentage}%</span>{" "}
+          </section>{" "}
+        </div>
       </div>
       {/* Markets */}
       <CoinData />

@@ -515,6 +515,85 @@ input:focus {
   border: none !important;
 }
 
+div.nav-tabs {
+  white-space: nowrap !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: 100%;
+  overflow-x: auto !important;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #c00569 !important;
+  color: white !important;
+  border-color: rgba(251, 251, 251, 0) !important;
+}
+
+.coin_description {
+  line-height: 1.9em;
+}
+
+.votes_percentage {
+  display: flex;
+  margin: 1em 0;
+  flex-direction: column;
+}
+
+.sentiment_votes_up_percentage {
+  color: green;
+}
+
+.sentiment_votes_up_percentage span,
+.sentiment_votes_down_percentage span {
+  padding-left: 0.3em;
+}
+
+.sentiment_votes_down_percentage {
+  color: red;
+}
+
+.tickers table tbody tr th,
+.tickers table tbody tr td {
+  padding-left: 1em;
+}
+
+.tickers .tickers_Id,
+.tickers .tickers_Price,
+.tickers .tickers_Pair,
+.tickers .tickers_Volume,
+.tickers .tickers_Url,
+.tickers .tickers_Exchange,
+.tickers .tickers_Price,
+.tickers .tickers_Pair,
+.tickers .tickers_Volume,
+.tickers .tickers_Url,
+.tickers .tickers_Exchange {
+  text-align: left !important;
+}
+
+.tickers .tickers_tr .tickers_Exchange,
+.tickers .tickers_tr .tickers_Pair,
+.tickers .tickers_tr .tickers_Url {
+  text-decoration: underline;
+}
+
+.tickers .tickers_tr .tickers_Exchange,
+.tickers .tickers_tr .tickers_Id,
+.tickers .tickers_tr .tickers_Pair,
+.tickers .tickers_tr .tickers_Price,
+.tickers .tickers_tr .tickers_Volume,
+.tickers .tickers_tr .tickers_Url {
+  color: black;
+}
+
+.tickers .table_tr_id th {
+  text-align: left;
+}
+
+.tickers img {
+  width: 1em;
+}
+
 .price_chart_id_coin {
   font-size: 1.5em;
   padding: 1em 0;
@@ -886,6 +965,7 @@ input:focus {
 
 .Description header {
   font-size: 2em;
+  color: #c00569 !important;
 }
 
 @media (max-width: 1007px) {
@@ -1422,6 +1502,12 @@ input:focus {
     padding-top: 2em;
   }
 }
+@media (max-width: 800px) {
+  .tickers_Url,
+.tickers_Volume {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   .price_chart_id_coin {
     font-size: 1em;
@@ -1451,6 +1537,9 @@ input:focus {
   }
 }
 @media screen and (max-width: 579px) {
+  .Description header {
+    font-size: 1.5em;
+  }
   .banner_text {
     margin-top: 2em;
   }
@@ -1530,6 +1619,9 @@ input:focus {
   }
 }
 @media screen and (max-width: 384px) {
+  .tickers_Trust_score {
+    display: none;
+  }
   .price_change_percentage_1h_in_currency_id header {
     font-size: 1em;
     padding-top: 1em;

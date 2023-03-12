@@ -1,5 +1,5 @@
 import React from "react";
-import BarChart from "../Chart/BarChart";
+import Market from "../Market/Market";
 import { Line } from "react-chartjs-2";
 import Converter from "./Converter";
 export default function Overview({
@@ -11,10 +11,11 @@ export default function Overview({
   market_data,
   market_cap_rank,
   coinPriceChart,
+  tickers,
 }) {
   //line chart
   const coinChart = {
-    labels: coinPriceChart.prices?.map((price) =>
+    labels: coinPriceChart?.prices?.map((price) =>
       new Date(price[0]).toLocaleDateString()
     ),
     datasets: [
@@ -261,7 +262,13 @@ export default function Overview({
               aria-labelledby="nav-profile-tab"
               tabIndex="0"
             >
-              <BarChart coin={coin} />
+              <Market
+                coin={coin}
+                id={id}
+                name={name}
+                symbol={symbol}
+                tickers={tickers}
+              />
             </div>
             <div
               className="tab-pane fade"
