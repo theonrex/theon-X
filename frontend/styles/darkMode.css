@@ -25,7 +25,7 @@
 .dark h6,
 .dark h4,
 .dark .MuiPaginationItem-page,
-.MuiPagination-ul li button
+.dark .MuiPagination-ul li button
 {
     color: white !important;
 }
