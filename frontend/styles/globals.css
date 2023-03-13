@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
 
 
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
-
-
 
 body {
-font-family: 'Golos Text', sans-serif;
+font-family: 'Golos Text', sans-serif !important;
   background-color: rgb(255, 255, 255); 
    /* background: linear-gradient(7deg, rgba(242, 198, 240, 0.2196078431) 0%, #ffffff 100%); */
   background-repeat: no-repeat;
