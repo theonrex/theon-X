@@ -38,7 +38,6 @@ const CoinData = dynamic(
 
 const CoinId = ({ coinPriceChart, coin }) => {
   const { id } = useParams();
-  console.log(coin?.tickers);
 
   // console.log(coin)
 

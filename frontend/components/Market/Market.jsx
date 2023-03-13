@@ -24,7 +24,6 @@ export default function Market({
     id: index + 1,
   }));
 
-  console.log(newTickersArray);
   return (
     <div className="container tickers">
       <table>
