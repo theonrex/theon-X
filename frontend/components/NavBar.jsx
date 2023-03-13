@@ -8,9 +8,11 @@ import { useRouter } from "next/router";
 import TheonLogo from "../public/theonrex plain.png";
 import Link from "next/link";
 import Theme from "./theme/theme";
+import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 
 function NavBar() {
   const router = useRouter();
+     const session = useSession();
 
   // ...
   return (
@@ -91,7 +93,7 @@ function NavBar() {
                     </Nav>
                     <Nav className="justify-content-end ">
                       <Nav.Link
-                        href="/Connect Wallet"
+                        href="/profile"
                         className={`${
                           "underline" +
                           (router.pathname === "/connectWallet"
@@ -99,9 +101,9 @@ function NavBar() {
                             : "")
                         } `}
                       >
-                        {/* <Button className="orange-btn nav-link ">
-													Connect Wallet
-												</Button> */}
+                        <Button className="orange-btn nav-link ">
+													{ session ? "Profile" : "Login" }
+												</Button>
                       </Nav.Link>
                       {/* <Button
 												className="purple_btn nav-link "

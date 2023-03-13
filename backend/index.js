@@ -32,3 +32,6 @@ app.listen(PORT, () => console.log("running on PORT " + PORT));
 
 // Export the Express API
 module.exports = app;
+
+//    https://github.com/
+ // git clone git@github.com:MoralisWeb3/Moralis-JS-SDK/tree/main/demos/supabase-auth

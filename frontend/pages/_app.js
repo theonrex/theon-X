@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Layout } from "../components";
 import "../styles/main.css";
@@ -6,24 +6,11 @@ import "../styles/globals.css";
 import "../styles/darkMode.css";
 
 //auth
-import {
-  createClient,
-  configureChains,
-  defaultChains,
-  WagmiConfig,
-} from "wagmi";
+import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
+import { SessionContextProvider } from "@supabase/auth-helpers-react";
+
 import { publicProvider } from "wagmi/providers/public";
 import { SSRProvider } from "@react-aria/ssr";
-
-const { provider, webSocketProvider } = configureChains(defaultChains, [
-  publicProvider(),
-]);
-
-const client = createClient({
-  provider,
-  webSocketProvider,
-  autoConnect: true,
-});
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -36,10 +23,17 @@ function MyApp({ Component, pageProps }) {
       : null;
   }, []);
 
+  const [supabase] = useState(() => createBrowserSupabaseClient());
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <SessionContextProvider
+      supabaseClient={supabase}
+      initialSession={pageProps.initialSession}
+    >
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>{" "}
+    </SessionContextProvider>
   );
 }
 
