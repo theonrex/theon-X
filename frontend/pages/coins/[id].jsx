@@ -73,9 +73,8 @@ const CoinId = ({ coinPriceChart, coin }) => {
 
       {/* Description */}
       <div className="Description container">
-        {(typeof coin.description.en === "string" &&
-          coin.description.en.includes("")) ||
-        coin.description.en.includes("\r\n") ? null : (
+        {typeof coin.description.en === "m" ||
+        coin.description.en === "\r\n" ? null : (
           <header>{coin.name} Description</header>
         )}
         <section
