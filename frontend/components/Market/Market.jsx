@@ -3,17 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function Market({
-  id,
-  cryptoID,
-  coin,
-  name,
-  symbol,
-  market_data,
-  market_cap_rank,
-  coinPriceChart,
-  tickers,
-}) {
+export default function Market({ tickers }) {
   const [idNumber, setIdNumber] = useState();
   const numbers = tickers.map((item, index) => {
     return { id: index + 1, trade_url: item.trade_url };
@@ -23,6 +13,8 @@ export default function Market({
     ...obj,
     id: index + 1,
   }));
+
+  console.log(tickers);
 
   return (
     <div className="container tickers">
@@ -54,8 +46,17 @@ export default function Market({
                     </Link>{" "}
                   </td>
                   <td className="tickers_Pair">
-                  
-                    {ticker.base = "0x" || "0X" ? ticker.coin_id : ticker.base}/ {ticker.target}{" "}
+                    {(typeof ticker.base === "string" &&
+                      ticker.base.includes("0x")) ||
+                    ticker.base.includes("0X")
+                      ? ticker.coin_id
+                      : ticker.base}
+                    /
+                    {(typeof ticker.target === "string" &&
+                      ticker.base.includes("0x")) ||
+                    ticker.base.includes("0X")
+                      ? ticker.target_coin_id
+                      : ticker.target}
                   </td>
                   <td className="tickers_Price">
                     {" "}
