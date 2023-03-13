@@ -55,7 +55,7 @@ export default function Market({
                   </td>
                   <td className="tickers_Pair">
                   
-                    {ticker.base = "0x" ? ticker.coin_id : ticker.base}/ {ticker.target}{" "}
+                    {ticker.base = "0x" || "0X" ? ticker.coin_id : ticker.base}/ {ticker.target}{" "}
                   </td>
                   <td className="tickers_Price">
                     {" "}
