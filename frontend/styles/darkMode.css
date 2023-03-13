@@ -23,7 +23,9 @@
 .dark .blog_current_title,
 .dark h5,
 .dark h6,
-.dark h4
+.dark h4,
+.dark .MuiPaginationItem-page,
+.MuiPagination-ul li button
 {
     color: white !important;
 }
