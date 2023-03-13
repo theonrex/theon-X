@@ -233,7 +233,7 @@ color: #c00569 !important;
   color: rgb(240, 240, 240) ;
 }
 
-coin_name_widget, .coin_name_widget a {
+.coin_name_widget, .coin_name_widget a {
     display: flex;
     flex-direction: column;
     align-items: center;
