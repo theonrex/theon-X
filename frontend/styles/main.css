@@ -266,12 +266,11 @@ input:focus {
 }
 
 .features_mg .col30 {
-  margin: 0 1em;
-  display: flex;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+    margin: 0 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .features_header {
