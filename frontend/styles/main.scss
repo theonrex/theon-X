@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
 $maincolor: #c00569;
 .bi-search {
   color: #ffffff !important;
@@ -79,7 +79,7 @@ input:focus {
   margin-top: 2em;
 }
 .purple_btn_normal {
-  padding: 2em;
+  padding: 12em;
 }
 .banner_btn {
   padding: 1em;
@@ -276,12 +276,11 @@ input:focus {
   width: 100%;
 }
 .features_mg .col30 {
-  margin: 0 1em;
-  display: flex;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+    margin: 0 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 .features_header {
   font-size: 3em;
