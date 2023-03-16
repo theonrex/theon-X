@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeAuth from "../Auth/Auth";
+import HomeAuth from "../Auth/HomeAuth";
 
 export default function Login() {
   return (
