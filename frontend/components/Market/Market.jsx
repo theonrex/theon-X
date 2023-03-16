@@ -14,11 +14,7 @@ export default function Market({ tickers }) {
     id: index + 1,
   }));
 
-<<<<<<< HEAD
   // console.log(tickers);
-=======
-  console.log(tickers);
->>>>>>> deb1d5b097631a913d8b0fd44c75c10afb326cb8
 
   return (
     <div className="container tickers">
