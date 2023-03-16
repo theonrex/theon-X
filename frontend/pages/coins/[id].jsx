@@ -39,7 +39,7 @@ const CoinData = dynamic(
 const CoinId = ({ coinPriceChart, coin }) => {
   const { id } = useParams();
 
-  // console.log(coin)
+  console.log(coin);
 
   return (
     <div className="">
@@ -73,7 +73,10 @@ const CoinId = ({ coinPriceChart, coin }) => {
 
       {/* Description */}
       <div className="Description container">
-        <header>{coin.name} Description</header>
+        {typeof coin.description.en === "m" ||
+        coin.description.en === "\r\n" ? null : (
+          <header>{coin.name} Description</header>
+        )}
         <section
           className="coin_description"
           dangerouslySetInnerHTML={{ __html: coin.description.en }}
@@ -81,11 +84,11 @@ const CoinId = ({ coinPriceChart, coin }) => {
         <hr />
         <div className="votes_percentage">
           <section className="sentiment_votes_up_percentage">
-            Positive Vote Rate Today: 
+            Positive Vote Rate Today:
             <span>{coin.sentiment_votes_up_percentage}%</span>{" "}
           </section>
           <section className="sentiment_votes_down_percentage">
-            Negative Vote Rate Today: 
+            Negative Vote Rate Today:
             <span>{coin.sentiment_votes_down_percentage}%</span>{" "}
           </section>{" "}
         </div>

@@ -16,6 +16,7 @@ const CoinData = ({ coinsData }) => {
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
   const [totalCrypto, settotalCrypto] = useState([]);
+  const [data, setData] = useState(false);
 
   const router = useRouter();
   // active_cryptocurrencies;
@@ -29,7 +30,6 @@ const CoinData = ({ coinsData }) => {
       .catch((error) => console.log(error));
   }, []);
 
-  // console.log(totalCrypto.data.active_cryptocurrencies);
   // pagenation
   const loadMore = () => {
     setPage((page) => page + 1);
@@ -45,6 +45,7 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
 
         .then((res) => {
           setMarkets(res.data);
+          setData(true);
         })
         .catch((error) => console.log(error));
   }, [page]);
@@ -88,7 +89,17 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
   const totalListedCoins = totalCrypto?.data?.active_cryptocurrencies;
 
   const result = totalListedCoins / perPage;
-  console.log(markets);
+
+  if (data == false)
+    return (
+      <div className="loader-3">
+        <div className="circle"></div>
+        <div className="circle"></div>
+        <div className="circle"></div>
+        <div className="circle"></div>
+        <div className="circle"></div>
+      </div>
+    );
 
   return (
     <div className="coinData_container">
@@ -345,7 +356,7 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
               page={page}
               size="small"
               onChange={handlePaginationChange}
-              count={result.toFixed(0)}
+              count={parseInt(result.toFixed(0))}
               color="secondary"
             />
           </Stack>

@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import Spinner from "react-bootstrap/Spinner";
+import { BiCloudUpload } from "react-icons/bi";
+import { FaBeer } from "react-icons/fa";
 
 export default function Avatar({ uid, url, size, onUpload }) {
   const supabase = useSupabaseClient();
@@ -56,31 +59,36 @@ export default function Avatar({ uid, url, size, onUpload }) {
   };
 
   return (
-    <div>
+    <div className="avatar_upload">
       {avatarUrl ? (
         <img
           src={avatarUrl}
           alt="Avatar"
-          className="avatar image"
-          style={{ height: size, width: size }}
-        />
-      ) : (
-        <div
           className="avatar no-image"
           style={{ height: size, width: size }}
         />
+      ) : (
+        <div className="avatar no-image">
+          <img src="https://img.icons8.com/fluency/48/null/vertcoin.png" />
+        </div>
       )}
-      <div style={{ width: size }}>
+      <div style={{ width: size, height: 12 }}>
         <label className="button primary block" htmlFor="single">
-          {uploading ? "Uploading ..." : "Upload"}
+          {uploading ? (
+            <Spinner animation="border" variant="warning" />
+          ) : (
+            <div>
+              Upload.. <i className="bi bi-cloud-upload-fill"></i>
+            </div>
+          )}
         </label>
         <input
           style={{
             visibility: "hidden",
-            position: "absolute",
           }}
           type="file"
           id="single"
+          className="avatar_file_upload"
           accept="image/*"
           onChange={uploadAvatar}
           disabled={uploading}

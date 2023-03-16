@@ -14,6 +14,15 @@ button:focus {
   outline: none !important;
 }
 
+.bi {
+  color: #c00569 !important;
+}
+
+.bi-cloud-upload-fill::before {
+  content: "\f2bf";
+  font-size: 2em;
+}
+
 input,
 input:hover,
 input:active,
@@ -27,6 +36,24 @@ input:focus {
 
 .nav_img {
   width: 60px;
+}
+
+.nav_btn {
+  background: #c7006b !important;
+  background: linear-gradient(18deg, rgb(199, 0, 107) 0%, rgb(14, 0, 115) 100%);
+  border: none;
+  display: inline-block;
+  /* font-size: 15px; */
+  font-weight: 600;
+  padding: 0.6em 2em !important;
+  border-radius: 7px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white !important;
+}
+
+.nav_btn a {
+  color: white;
 }
 
 .hero-banner-container {
@@ -56,7 +83,7 @@ input:focus {
 }
 
 .purple_btn_normal {
-  padding: 12em;
+  padding: 2em;
 }
 
 .banner_btn {
@@ -335,6 +362,164 @@ input:focus {
   width: 60%;
   padding-bottom: 2em;
   margin: auto;
+}
+
+.c-egTDuJ-iwjZXY-color-default {
+  background-color: #c7006b !important;
+  border-radius: 1em !important;
+  padding: 1em !important;
+  color: white !important;
+}
+
+.auth_button {
+  font-size: 1em !important;
+  margin: 0 1em 0 0 !important;
+  background-color: #c7006b !important;
+  border-radius: 0.4em !important;
+  border-color: transparent !important;
+  color: white !important;
+  padding: 0.5em 1em !important;
+}
+
+.auth_label {
+  color: rgb(0, 0, 0) !important;
+}
+
+.auth_input {
+  padding: 1em !important;
+  border-radius: 0.5em !important;
+  border: 1px solid #c7006b !important;
+}
+
+.auth_page_card {
+  backdrop-filter: blur(23px) saturate(185%);
+  -webkit-backdrop-filter: blur(23px) saturate(185%);
+  border-radius: 12px;
+}
+
+.auth_page_card header {
+  font-size: 3em;
+  font-weight: 500;
+  color: #c00569;
+}
+
+.auth_page_card p {
+  width: 50%;
+  padding-top: 1.5em;
+}
+
+.Profile_Auth header {
+  font-size: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.no-image {
+  border: 1px solid #c00569;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.Profile_Auth_Info {
+  display: flex;
+  flex-direction: column;
+}
+
+.Profile_Auth_Info input {
+  width: 79%;
+  margin-top: 0.5em;
+}
+
+.Profile_Auth_Info label {
+  margin-top: 0.9em;
+  margin-bottom: 1em;
+}
+
+.update_account_btn {
+  font-size: 0.9em;
+  margin: 1em 0;
+  background-color: #c7006b !important;
+  border-radius: 0.4em;
+  border-color: transparent !important;
+  color: white;
+  padding: 0.5em 1em;
+  width: 50%;
+}
+
+.sign_out_btn {
+  font-size: 0.9em;
+  margin: 1em 0;
+  background-color: #c7006b !important;
+  border-radius: 0.4em;
+  border-color: transparent !important;
+  color: white;
+  padding: 0.5em 1em;
+}
+
+.profile_header {
+  background: #c00569;
+  width: 100%;
+  height: 13em;
+  border-radius: 1em 1em 0em 0em;
+}
+
+.profile_img_header {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.avatar_header_image {
+  display: flex;
+  position: relative;
+  top: -2em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.profile_img_header section header {
+  margin: 0 2em !important;
+  padding-bottom: 0.4em !important;
+}
+
+.profile_img_header section p {
+  margin: 0 3em !important;
+}
+
+.avatar_header_image {
+  border-radius: 50%;
+  width: 11em !important;
+  height: 11em !important;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 0.4em solid rgb(255, 255, 255);
+}
+
+.avatar_upload {
+  display: flex;
+  width: 79%;
+  justify-content: space-between;
+  height: -webkit-min-content !important;
+  height: -moz-min-content !important;
+  height: min-content !important;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-bottom: -14em;
+}
+
+.avatar_file_upload {
+  margin-bottom: 0 !important;
+}
+
+.avatar {
+  width: 51px !important;
+  height: 51px !important;
+}
+
+.upload_image_label {
+  left: 0;
+  position: absolute;
 }
 
 .product_card {
@@ -949,6 +1134,12 @@ div.nav-tabs {
   padding: 1px;
 }
 
+li .css-165lrpn-MuiButtonBase-root-MuiPaginationItem-root,
+.MuiPaginationItem-page,
+.MuiPagination-ul li button {
+  color: rgb(0, 0, 0);
+}
+
 .price_change_percentage_table th {
   text-align: center;
 }
@@ -1261,6 +1452,10 @@ div.nav-tabs {
 }
 
 @media screen and (max-width: 1200px) {
+  .auth_page_card p {
+    width: 100%;
+    padding-top: 1em;
+  }
   .coin_id_market_details {
     margin-top: 2em;
   }
@@ -1403,7 +1598,6 @@ div.nav-tabs {
     border-radius: 7px;
     text-transform: uppercase;
     cursor: pointer;
-    color: black !important;
   }
   .count_up .countUp_span {
     font-size: 0.6em;
@@ -1454,7 +1648,7 @@ div.nav-tabs {
     text-align: center;
   }
   .coin_name_widget {
-    font-size: 1em;
+    font-size: 0.8em;
     text-align: left;
     font-weight: bold;
     margin: 0.3em 0;
@@ -1519,24 +1713,43 @@ div.nav-tabs {
     font-size: 24px;
   }
 }
-@media screen and (max-width: 500px) {
-  .nav-tabs .nav-link {
-    font-size: 0.7em;
-  }
-  .post_head header {
-    font-size: 0.8em;
-  }
-  .overlay_marquee {
-    --gradient-width: 20px;
-  }
-  .home_banner_btn_div {
-    text-align: center;
-    margin: auto;
-    display: block;
-    padding-top: 2em;
-  }
-}
 @media screen and (max-width: 579px) {
+  .profile_header {
+    height: 10em;
+    border-radius: 1em 1em 0em 0em;
+  }
+  .avatar_header_image {
+    display: flex;
+    position: relative;
+    top: -5em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .profile_img_header section {
+    margin-top: -2em;
+  }
+  .profile_img_header {
+    width: 100%;
+    display: block;
+  }
+  .profile_img_header section header {
+    margin: 0 !important;
+    padding-bottom: 0.4em !important;
+  }
+  .profile_img_header section p {
+    margin: 0 !important;
+  }
+  .Profile_Auth_Info input,
+.avatar_upload {
+    width: 99%;
+    margin-top: 0.5em;
+  }
+  .avatar_header_image {
+    width: 11em !important;
+    margin: auto;
+    height: 11em !important;
+  }
   .Description header {
     font-size: 1.5em;
   }
@@ -1608,7 +1821,27 @@ div.nav-tabs {
     padding-top: 0;
   }
 }
+@media screen and (max-width: 500px) {
+  .nav-tabs .nav-link {
+    font-size: 0.7em;
+  }
+  .post_head header {
+    font-size: 0.8em;
+  }
+  .overlay_marquee {
+    --gradient-width: 20px;
+  }
+  .home_banner_btn_div {
+    text-align: center;
+    margin: auto;
+    display: block;
+    padding-top: 2em;
+  }
+}
 @media screen and (max-width: 404px) {
+  .Linechart {
+    display: none !important;
+  }
   .count_up {
     margin: 2em 0;
     padding: 2em 0.2em;
@@ -1619,7 +1852,7 @@ div.nav-tabs {
   }
 }
 @media screen and (max-width: 384px) {
-  .tickers_Trust_score {
+  .tickers_Price {
     display: none;
   }
   .price_change_percentage_1h_in_currency_id header {

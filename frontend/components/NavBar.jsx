@@ -12,7 +12,7 @@ import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 
 function NavBar() {
   const router = useRouter();
-     const session = useSession();
+  const session = useSession();
 
   // ...
   return (
@@ -91,7 +91,7 @@ function NavBar() {
                         Coins{" "}
                       </Nav.Link>
                     </Nav>
-                    <Nav className="justify-content-end ">
+                    <Nav className="justify-content-end  ">
                       <Nav.Link
                         href="/profile"
                         className={`${
@@ -101,9 +101,9 @@ function NavBar() {
                             : "")
                         } `}
                       >
-                        <Button className="orange-btn nav-link ">
-													{ session ? "Profile" : "Login" }
-												</Button>
+                        <Button className="nav_btn  ">
+                          {session ? "Profile" : "Login"}
+                        </Button>
                       </Nav.Link>
                       {/* <Button
 												className="purple_btn nav-link "

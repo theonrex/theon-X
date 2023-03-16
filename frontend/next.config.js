@@ -16,6 +16,17 @@ module.exports = {
       },
     ];
   },
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.icons8.com",
+        port: "",
+        pathname: "/account123/**",
+      },
+    ],
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },

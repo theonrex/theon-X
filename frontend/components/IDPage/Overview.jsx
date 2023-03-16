@@ -120,9 +120,9 @@ export default function Overview({
               aria-labelledby="nav-home-tab"
               tabIndex="0"
             >
-              <div>
+              <div className="Linechart">
                 <header className="price_chart_id_coin">
-                  24 {name} Price Chart
+                  24H {name} Price Chart
                   <span> ({symbol}/USD)</span>
                 </header>
                 <Line data={coinChart} />

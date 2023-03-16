@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { useUser, useSupabaseClient } from "@supabase/auth-helpers-react";
 import Avatar from "../Upload/Avatar";
+import AvatarImg from "../Upload/AvatarImg";
 export default function Account({ session }) {
   const supabase = useSupabaseClient();
   const user = useUser();
   const [loading, setLoading] = useState(true);
   const [username, setUsername] = useState(null);
-  const [website, setWebsite] = useState(null);
+  const [bio, setBio] = useState(null);
   const [avatar_url, setAvatarUrl] = useState(null);
+  const [profileUpdated, setProfileUpdated] = useState(false);
 
   useEffect(() => {
     getProfile();
@@ -19,7 +21,7 @@ export default function Account({ session }) {
 
       let { data, error, status } = await supabase
         .from("profiles")
-        .select(`username, website, avatar_url`)
+        .select(`username, bio, avatar_url`)
         .eq("id", user.id)
         .single();
 
@@ -29,7 +31,7 @@ export default function Account({ session }) {
 
       if (data) {
         setUsername(data.username);
-        setWebsite(data.website);
+        setBio(data.bio);
         setAvatarUrl(data.avatar_url);
       }
     } catch (error) {
@@ -40,21 +42,22 @@ export default function Account({ session }) {
     }
   }
 
-  async function updateProfile({ username, website, avatar_url }) {
+  async function updateProfile({ username, bio, avatar_url }) {
     try {
       setLoading(true);
+      setProfileUpdated(false);
 
       const updates = {
         id: user.id,
         username,
-        website,
+        bio,
         avatar_url,
         updated_at: new Date().toISOString(),
       };
 
       let { error } = await supabase.from("profiles").upsert(updates);
       if (error) throw error;
-      alert("Profile updated!");
+      setProfileUpdated(true);
     } catch (error) {
       alert("Error updating the data!");
       console.log(error);
@@ -64,52 +67,80 @@ export default function Account({ session }) {
   }
 
   return (
-    <div className="form-widget">
-      <div>
-        <label htmlFor="email">Email</label>
-        <input id="email" type="text" value={session.user.email} disabled />
-      </div>
-      <Avatar
-        uid={user.id}
-        url={avatar_url}
-        size={150}
-        onUpload={(url) => {
-          setAvatarUrl(url);
-          updateProfile({ username, website, avatar_url: url });
-        }}
-      />
-      <div>
-        <label htmlFor="username">Username</label>
-        <input
-          id="username"
-          type="text"
-          value={username || ""}
-          onChange={(e) => setUsername(e.target.value)}
+    <div className=" form-widget Profile_Auth container-xxl">
+      <div className="profile_header"></div>
+
+      <div className="profile_img_header container">
+        <AvatarImg
+          uid={user.id}
+          url={avatar_url}
+          size={150}
+          onUpload={(url) => {
+            setAvatarUrl(url);
+            updateProfile({ username, bio, avatar_url: url });
+          }}
         />
-      </div>
-      <div>
-        <label htmlFor="website">Website</label>
-        <input
-          id="website"
-          type="website"
-          value={website || ""}
-          onChange={(e) => setWebsite(e.target.value)}
-        />
+        <section>
+          <header> Edit Profile</header>
+
+          <p>Update your photo and personal details</p>
+        </section>{" "}
       </div>
 
-      <div>
+      <div className="container">
+        <div className="Profile_Auth_Info">
+          <label htmlFor="email">Email</label>
+          <input id="email" type="text" value={session.user.email} disabled />
+        </div>
+
+        <div className="Profile_Auth_Info">
+          <label htmlFor="username">Username</label>
+          <input
+            id="username"
+            type="text"
+            value={username || ""}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+
+        <div className="Profile_Auth_Info">
+          <label htmlFor="username">Your Photo</label>
+
+          <Avatar
+            uid={user.id}
+            url={avatar_url}
+            size={150}
+            onUpload={(url) => {
+              setAvatarUrl(url);
+              updateProfile({ username, bio, avatar_url: url });
+            }}
+          />
+        </div>
+        <div className="Profile_Auth_Info">
+          <label htmlFor="bio">Bio</label>
+          <input
+            id="bio"
+            type="bio"
+            value={bio || ""}
+            onChange={(e) => setBio(e.target.value)}
+          />
+        </div>
+      </div>
+
+      <div className="container">
         <button
-          className="button primary block"
-          onClick={() => updateProfile({ username, website, avatar_url })}
+          className="update_account_btn "
+          onClick={() => updateProfile({ username, bio, avatar_url })}
           disabled={loading}
         >
           {loading ? "Loading ..." : "Update"}
         </button>
+        {profileUpdated == true ? "Profile Updated Succesfully" : null}
       </div>
 
-      <div>
+      <div className="container">
         <button
-          className="button block"
+          className="sign_out_btn"
           onClick={() => supabase.auth.signOut()}
         >
           Sign Out
