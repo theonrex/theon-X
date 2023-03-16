@@ -360,6 +360,7 @@ input:focus {
 }
 
 .auth_label {
+  padding-bottom: 1em;
   color: rgb(0, 0, 0) !important;
 }
 
@@ -369,8 +370,7 @@ input:focus {
   border: 1px solid #c7006b !important;
 }
 .auth_page_card {
-  backdrop-filter: blur(23px) saturate(185%);
-  -webkit-backdrop-filter: blur(23px) saturate(185%);
+ 
   border-radius: 12px;
 }
 
@@ -1821,6 +1821,9 @@ li .css-165lrpn-MuiButtonBase-root-MuiPaginationItem-root,
 }
 
 @media screen and (max-width: 404px) {
+  .auth_page_card header{
+    font-size: 2em;
+  }
   .Linechart {
     display: none !important;
   }

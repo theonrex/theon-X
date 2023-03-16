@@ -9,7 +9,7 @@ const HomeAuth = () => {
 
   return (
     <div className="rowx auth_page">
-      <div className="container-xxl ">
+      <div className={!session ? "container " : "container-xxl "}>
         {!session ? (
           <section className="col50 ">
             <section className="auth_page_card">
