@@ -82,7 +82,7 @@ input:focus {
 }
 
 .purple_btn_normal {
-  padding: 2em;
+  padding: 12em;
 }
 
 .banner_btn {
@@ -231,7 +231,7 @@ input:focus {
 }
 
 .price_widget {
-  font-size: 1em;
+  font-size: 0.8em;
   margin: 0;
 }
 
@@ -294,8 +294,7 @@ input:focus {
 .features_mg .col30 {
   margin: 0 1em;
   display: flex;
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
