@@ -240,6 +240,11 @@ input:focus {
   margin: 0;
 }
 
+.coin_price {
+  font-size: 1em;
+  margin: 0;
+}
+
 .top_Cryptocurrency {
   font-weight: bold;
   padding: 1em 0;

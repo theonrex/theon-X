@@ -152,7 +152,7 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
                             </h4>
                           </Link>
                         </td>
-                        <td className="price_widget">
+                        <td className="coin_price">
                           <Link
                             target="_blank"
                             passHref
@@ -160,7 +160,7 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
                             href={`/coins/${market.id}`}
                             key={market.id}
                           >
-                            <h4 className="price_widget">
+                            <h4 className="coin_price">
                               $
                               {market.current_price?.toLocaleString({
                                 maximumFractionDigits: 5,

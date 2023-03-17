@@ -19,7 +19,7 @@ const Cryptowidget = ({
         <div className=" widget_Details">
           {url}
           <h1 className="coin_name_widget">{name} </h1>
-          <h4 className="price_widget">
+          <h4 className=" price_widget">
             $ {price.toFixed(1) == 0 ? price : price.toFixed(2)}
           </h4>
           {price_change_percentage_24h < 0 ? (
