@@ -1,4 +1,3 @@
-
 $maincolor: #c00569;
 .bi-search {
   color: #ffffff !important;
@@ -14,13 +13,13 @@ button:active,
 button:focus {
   outline: none !important;
 }
-.bi{
+.bi {
   color: $maincolor !important;
 }
 
 .bi-cloud-upload-fill::before {
-    content: "\f2bf";
-    font-size: 2em;
+  content: "\f2bf";
+  font-size: 2em;
 }
 input,
 input:hover,
@@ -35,8 +34,7 @@ input:focus {
 .nav_img {
   width: 60px;
 }
-.nav_btn{
-
+.nav_btn {
   background: #c7006b !important;
   background: linear-gradient(18deg, rgb(199, 0, 107) 0%, rgb(14, 0, 115) 100%);
   border: none;
@@ -50,9 +48,8 @@ input:focus {
 
   color: white !important;
 }
-.nav_btn a{
+.nav_btn a {
   color: white;
-
 }
 
 .hero-banner-container {
@@ -78,6 +75,7 @@ input:focus {
 .haven_img_banner_Nft {
   margin-top: 2em;
 }
+
 .purple_btn_normal {
   padding: 1em;
 }
@@ -191,6 +189,11 @@ input:focus {
   justify-content: center;
   align-content: flex-end;
 }
+
+.widget_Details .red,
+.widget_Details .green{
+  font-size: 0.7em;
+}
 .widget_container {
   display: flex;
 }
@@ -276,11 +279,11 @@ input:focus {
   width: 100%;
 }
 .features_mg .col30 {
-    margin: 0 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  margin: 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .features_header {
   font-size: 3em;
@@ -369,7 +372,6 @@ input:focus {
   border: 1px solid #c7006b !important;
 }
 .auth_page_card {
- 
   border-radius: 12px;
 }
 
@@ -396,18 +398,17 @@ input:focus {
   padding: 0;
 }
 .Profile_Auth_Info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .Profile_Auth_Info input {
   width: 79%;
   margin-top: 0.5em;
 }
-.Profile_Auth_Info label{
-    margin-top: 0.9em;
+.Profile_Auth_Info label {
+  margin-top: 0.9em;
 
   margin-bottom: 1em;
-
 }
 
 .update_account_btn {
@@ -468,18 +469,16 @@ input:focus {
   border: 0.4em solid rgb(255, 255, 255);
 }
 .avatar_upload {
-    display: flex;
-    width: 79%;
-    justify-content: space-between;
-    height: min-content !important;
-    flex-direction: row;
-    align-items: flex-start;
-    padding-bottom: -14em;
-
-
+  display: flex;
+  width: 79%;
+  justify-content: space-between;
+  height: min-content !important;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-bottom: -14em;
 }
 .avatar_file_upload {
- margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .avatar {
@@ -487,9 +486,8 @@ input:focus {
   height: 51px !important;
 }
 .upload_image_label {
-left: 0;
-position: absolute;
-
+  left: 0;
+  position: absolute;
 }
 
 //blog
@@ -1405,7 +1403,7 @@ li .css-165lrpn-MuiButtonBase-root-MuiPaginationItem-root,
   .auth_page_card p {
     width: 100%;
     padding-top: 1em;
-}
+  }
   .coin_id_market_details {
     margin-top: 2em;
   }
@@ -1682,48 +1680,45 @@ li .css-165lrpn-MuiButtonBase-root-MuiPaginationItem-root,
   }
 }
 
-
 @media screen and (max-width: 579px) {
-
   .profile_header {
     height: 10em;
     border-radius: 1em 1em 0em 0em;
-}
+  }
 
-.avatar_header_image {
+  .avatar_header_image {
     display: flex;
     position: relative;
     top: -5em;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-}
+  }
 
-.profile_img_header section{
+  .profile_img_header section {
     margin-top: -2em;
-
-}
-  .profile_img_header{
+  }
+  .profile_img_header {
     width: 100%;
     display: block;
   }
   .profile_img_header section header {
-    margin: 0  !important;
+    margin: 0 !important;
     padding-bottom: 0.4em !important;
-}
-.profile_img_header section p {
-    margin: 0  !important;
-}
-.Profile_Auth_Info input,
-.avatar_upload  {
+  }
+  .profile_img_header section p {
+    margin: 0 !important;
+  }
+  .Profile_Auth_Info input,
+  .avatar_upload {
     width: 99%;
     margin-top: 0.5em;
-}
+  }
   .avatar_header_image {
     width: 11em !important;
     margin: auto;
     height: 11em !important;
-}
+  }
   .Description header {
     font-size: 1.5em;
   }
@@ -1820,7 +1815,7 @@ li .css-165lrpn-MuiButtonBase-root-MuiPaginationItem-root,
 }
 
 @media screen and (max-width: 404px) {
-  .auth_page_card header{
+  .auth_page_card header {
     font-size: 2em;
   }
   .Linechart {

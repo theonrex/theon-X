@@ -197,6 +197,11 @@ input:focus {
   align-content: flex-end;
 }
 
+.widget_Details .red,
+.widget_Details .green {
+  font-size: 0.7em;
+}
+
 .widget_container {
   display: flex;
 }
