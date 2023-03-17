@@ -16,7 +16,6 @@ const Countup = () => {
       .catch((error) => console.log(error));
   }, []);
 	
-	console.log(totalCrypto);
   const totalListedCoins = totalCrypto?.data?.active_cryptocurrencies;
 
   useCountUp({

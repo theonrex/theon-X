@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
-
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 
 body {
@@ -171,7 +171,7 @@ font-family: 'Golos Text', sans-serif !important;}
 /* From uiverse.io by @mobinkakei */
 .loader-3 {
  position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
     display: flex;
@@ -182,10 +182,10 @@ font-family: 'Golos Text', sans-serif !important;}
     align-items: center;
 }
 .circle {
-  width: 1em;
-      margin: 0 1em;
+  width: 0.5em;
+      margin: 2em 0.4em;
 
-  height: 1em;
+  height: 0.5em;
   border-radius: 50%;
   position: relative;
 }

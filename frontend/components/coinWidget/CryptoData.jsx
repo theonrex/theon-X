@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import https from "https";
 
 import Cryptowidget from "./Cryptowidget";
 import axios from "axios";
 import Marquee from "react-fast-marquee";
 const CryptoData = () => {
-
-	const [markets, setMarkets] = useState([]);
-	const [search, setSearch] = useState("");
-	  const count = useRef([]);
+  const [markets, setMarkets] = useState([]);
 
 
-	useEffect(() => {
-		const options = {
+  
+
+  useEffect(() => {
+    const options = {
       method: "GET",
       url: "https://coingecko.p.rapidapi.com/coins/markets",
       params: {
@@ -26,26 +26,16 @@ const CryptoData = () => {
       },
     };
 
-		axios
-			.request(options)
+    axios
+      .request(options)
 
-			.then((response) => {
-				setMarkets(response.data);
-			})
-			.catch((error) => console.log(error));
-	}, []);
+      .then((response) => {
+        setMarkets(response.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
 
-
-	const handleChange = (e) => {
-		setSearch(e.target.value);
-	};
-
-	const filteredMarkets = markets.filter((coin) =>
-		coin.name.toLowerCase().includes(search.toLowerCase())
-	);
-
-
-	return (
+  return (
     <div className="container col100">
       <div className="">
         <h2 className="top_Cryptocurrency container-xxl purple_text">
@@ -55,7 +45,7 @@ const CryptoData = () => {
 
         <Marquee speed={15} pauseOnHover={false} gradient={false}>
           <div className="widget_scroll">
-            {markets.map((market, i) => {
+            { markets && markets.map((market, i) => {
               return (
                 <Cryptowidget
                   key={i}
@@ -78,3 +68,10 @@ const CryptoData = () => {
 };
 
 export default CryptoData;
+
+
+
+
+
+
+
