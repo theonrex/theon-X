@@ -34,7 +34,7 @@ export default function Theme(props) {
 
   return (
     <div>
-      <div>
+      <div className="theme">
         {darkMode === true ? (
           <FcNightLandscape onClick={ActiveMode} />
         ) : (
