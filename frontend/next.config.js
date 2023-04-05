@@ -14,7 +14,11 @@ module.exports = {
       },
       {
         source: "/coins/:id*",
-        destination: "https://api.coingecko.com/api",
+        destination: "https://api.coingecko.com/",
+      },
+      {
+        source: "/coins/:id*",
+        destination: "https://theon-x.vercel.app",
       },
     ];
   },

@@ -28,6 +28,31 @@ app.get("/news", (req, res) => {
     });
 });
 
+// fetch market chart
+app.get("/coins", (req, res) => {
+  const options = {
+    method: "GET",
+    url: `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1d`,
+
+    headers: {
+      accept: "application/json",
+    },
+  };
+  axios
+    .request(options)
+    .then(function (response) {
+      console.log(response.data);
+      res.json(response.data);
+
+      // res.json(response.data.slice(0, 6));
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+});
+
+
+
 app.listen(PORT, () => console.log("running on PORT " + PORT));
 
 // Export the Express API

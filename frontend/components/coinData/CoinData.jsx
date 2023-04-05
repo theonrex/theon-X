@@ -9,7 +9,7 @@ import { Sparklines, SparklinesLine } from "react-sparklines";
 import Data from "../globalCrypoData/Data";
 
 import CoinDisplay from "../coinSearch/CoinDisplay";
-const CoinData = ({ coinsData }) => {
+const CoinData = () => {
   const [markets, setMarkets] = useState([]);
   const [filteredCoins, setFilteredCoins] = useState(markets);
   const [search, setSearch] = useState("");
@@ -369,17 +369,3 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
 };
 
 export default CoinData;
-
-export const getServerSideProps = async () => {
-  const res = await fetch(
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false"
-  );
-
-  const coinsData = await res.json();
-
-  return {
-    props: {
-      coinsData,
-    },
-  };
-};
