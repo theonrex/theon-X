@@ -7,9 +7,6 @@ import Marquee from "react-fast-marquee";
 const CryptoData = () => {
   const [markets, setMarkets] = useState([]);
 
-
-  
-
   useEffect(() => {
     const options = {
       method: "GET",
@@ -45,21 +42,22 @@ const CryptoData = () => {
 
         <Marquee speed={15} pauseOnHover={false} gradient={false}>
           <div className="widget_scroll">
-            { markets && markets.map((market, i) => {
-              return (
-                <Cryptowidget
-                  key={i}
-                  keys={market.url}
-                  name={market.name}
-                  price={market.current_price}
-                  image={market.image}
-                  price_change_percentage_24h={
-                    market.price_change_percentage_24h
-                  }
-                  market_cap_rank={market.market_cap_rank}
-                />
-              );
-            })}
+            {markets &&
+              markets.map((market, i) => {
+                return (
+                  <Cryptowidget
+                    key={i}
+                    keys={market.url}
+                    name={market.name}
+                    price={market.current_price}
+                    image={market.image}
+                    price_change_percentage_24h={
+                      market.price_change_percentage_24h
+                    }
+                    market_cap_rank={market.market_cap_rank}
+                  />
+                );
+              })}
           </div>
         </Marquee>
       </div>
@@ -68,10 +66,3 @@ const CryptoData = () => {
 };
 
 export default CryptoData;
-
-
-
-
-
-
-

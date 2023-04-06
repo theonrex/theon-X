@@ -30,9 +30,11 @@ app.get("/news", (req, res) => {
 
 // fetch market chart
 app.get("/coins", (req, res) => {
+      const { query } = req;
+
   const options = {
     method: "GET",
-    url: `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1d`,
+    url: `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=${query.page}&sparkline=true&price_change_percentage=1h%2C24h%2C7d%2C14d%2C30d%2C1y`,
 
     headers: {
       accept: "application/json",
@@ -51,12 +53,10 @@ app.get("/coins", (req, res) => {
     });
 });
 
-
-
 app.listen(PORT, () => console.log("running on PORT " + PORT));
 
 // Export the Express API
 module.exports = app;
 
 //    https://github.com/
- // git clone git@github.com:MoralisWeb3/Moralis-JS-SDK/tree/main/demos/supabase-auth
+// git clone git@github.com:MoralisWeb3/Moralis-JS-SDK/tree/main/demos/supabase-auth
